@@ -4,7 +4,7 @@ import com.illposed.osc.{OSCMessage, OSCPortIn, OSCListener}
 import java.util.Date
 import collection.mutable.{ListBuffer, HashMap}
 
-class Client(val port:Int) extends OSCListener {
+class Client(val port:Int, val factory: Factory) extends OSCListener {
 	val symbols= new HashMap[Long, Symbol]
 	val aliveSymbols = new ListBuffer[Long]
 
@@ -41,7 +41,7 @@ class Client(val port:Int) extends OSCListener {
 							aliveSymbols += sid
 						}
 						case None => {
-							val sym = new Symbol(sid, cid, xpos, ypos)
+							val sym = factory.createSymbol(new Symbol(sid, cid, xpos, ypos))
 							symbols(sid) = sym
 							aliveSymbols += sid
 						}
@@ -72,7 +72,7 @@ class Client(val port:Int) extends OSCListener {
 							aliveCursors += sid
 						}
 						case None => {
-							val cur = new Cursor(sid, xpos, ypos)
+							val cur = factory.createCursor(new Cursor(sid, xpos, ypos))
 							cursors(sid) = cur
 							aliveCursors += sid
 						}

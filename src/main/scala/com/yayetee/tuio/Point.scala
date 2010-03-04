@@ -6,4 +6,4 @@ package com.yayetee.tuio
  * Time: 21:35:42
  */
 
-class Point(var xpos: Int, var ypos: Int)
+class Point(var xpos: Float, var ypos: Float)

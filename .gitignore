@@ -1,0 +1,5 @@
+target/classes/*
+target/test-classes/*
+target/maven-archiver/*
+target/build/*
+target

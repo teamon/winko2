@@ -59,6 +59,8 @@ class Client(val port:Int, val factory: Factory) extends OSCListener {
 					})
 					aliveSymbols.clear
 				}
+
+
 			}
 			case "/tuio/2Dcur" => command match {
 				case "set" => {
@@ -92,7 +94,7 @@ class Client(val port:Int, val factory: Factory) extends OSCListener {
 				}
 			}
 		}
-
+Logger.debug("symobls: " + symbols.toString)
 	}
 	
 }

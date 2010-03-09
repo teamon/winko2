@@ -40,12 +40,12 @@ class EventListener extends OpenGL2DEventListener {
 		loadIdentity
 
 		pushMatrix
-		translate(100, 100)
-		fill(0xFF, 0, 0)
-		rect(0, 0, 300, 300)
-		rotate(63)
-		fill(0f, 0f, 1f)
-		rect(0, 0, 300, 300)
+//		translate(100, 100)
+//		fill(0xFF, 0, 0)
+//		rect(0, 0, 300, 300)
+//		rotate(63)
+//		fill(0f, 0f, 1f)
+//		rect(0, 0, 300, 300)
 		popMatrix
 
 		gl.glFinish

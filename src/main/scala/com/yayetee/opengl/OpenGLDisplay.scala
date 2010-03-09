@@ -38,7 +38,10 @@ class OpenGLDisplay(title: String, val width: Int, val height: Int, val eventLis
 	def start {
 		frame.setUndecorated(fullscreen)
 		frame.addWindowListener(new WindowAdapter {
-			override def windowClosing(e: WindowEvent) {stop}
+			override def windowClosing(e: WindowEvent) {
+				stop
+				exit(0)
+			}
 		})
 
 		if (fullscreen) {
@@ -97,6 +100,5 @@ class OpenGLDisplay(title: String, val width: Int, val height: Int, val eventLis
 							(requestedRefreshRate == DONT_CARE || requestedDepth == dm.getRefreshRate)
 			).getOrElse(displayModes(0))
 	}
-
 
 }

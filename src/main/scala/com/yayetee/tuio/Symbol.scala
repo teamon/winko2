@@ -7,11 +7,14 @@ package com.yayetee.tuio
  */
 
 class Symbol(sid: Long, val symbolID: Int, xp: Float, yp: Float) extends Node(sid, xp, yp){
+	def this(sym: Symbol) = this(sym.sessionID, sym.symbolID, sym.xpos, sym.ypos)
 
 	def update(xp:Float, yp:Float){
 		xpos = xp
 		ypos = yp
 	}
 
-	def remove {}
+	def remove {
+		Logger.debug("Symbol removed sid=%d class=%s", sessionID, getClass.getName)
+	}
 }

@@ -2,13 +2,14 @@ package com.yayetee.winko.graphics
 
 import com.yayetee.opengl.{OpenGL2DEventListener}
 import javax.media.opengl.GL
+import com.yayetee.winko.engine.{WSymbol, Engine}
 
 /**
  * OpenGL 2D Event listener
  *
  * @author Tymon Tobolski
  */
-class EventListener extends OpenGL2DEventListener {
+class OpenGLView extends OpenGL2DEventListener {
 	import GL._
 
 	def init {
@@ -38,6 +39,12 @@ class EventListener extends OpenGL2DEventListener {
 	def display {
 		clear(GL_COLOR_BUFFER_BIT)
 		loadIdentity
+
+		Engine.symbols.foreach { case (sid, sym) => {
+			pushMatrix
+			sym.asInstanceOf[WSymbol].display(this)
+			popMatrix
+		}}
 
 		pushMatrix
 //		translate(100, 100)

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" id="15302a95-ac70-4da0-b9e6-d7e74836bfc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Symbol.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Symbol.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGLDisplay.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGLDisplay.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/winko.iws" afterPath="$PROJECT_DIR$/winko.iws" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="winko.iws" />
@@ -203,46 +202,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OpenGL.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="$TEMPLATE$" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Demo.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="2" selection-start="646" selection-end="646" vertical-scroll-proportion="0.9775">
+            <state line="20" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.48">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hooks.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala">
+      <file leaf-file-name="OpenGL.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="28" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WSymbol.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Symbol.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Symbol.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="3" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
+            <state line="45" column="15" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -270,14 +242,14 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DEventListener.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Logger.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Callbacks.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGLDisplay.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Symbol.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" />
       </list>
     </option>
@@ -889,11 +861,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="36" selection-start="999" selection-end="999" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/demos/common/GLDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="$TEMPLATE$" selection-start="3876" selection-end="4260" vertical-scroll-proportion="-2.1449275" />
@@ -928,44 +895,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="37" selection-start="63" selection-end="63" vertical-scroll-proportion="0.050713155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="$TEMPLATE$" selection-start="1050" selection-end="1050" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="30" selection-start="147" selection-end="147" vertical-scroll-proportion="0.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGLDisplay.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="15" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.625974">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="42" selection-start="226" selection-end="226" vertical-scroll-proportion="0.24">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="28" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -977,16 +909,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Factory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="$TEMPLATE$" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="37" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+        <state line="7" column="31" selection-start="237" selection-end="237" vertical-scroll-proportion="0.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="15" selection-start="1024" selection-end="1024" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="2" selection-start="646" selection-end="646" vertical-scroll-proportion="0.9775">
+        <state line="20" column="21" selection-start="407" selection-end="407" vertical-scroll-proportion="0.48">
           <folding />
         </state>
       </provider>

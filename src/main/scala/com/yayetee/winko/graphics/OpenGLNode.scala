@@ -6,4 +6,6 @@ package com.yayetee.winko.graphics
  * Time: 13:20:58
  */
 
-trait OpenGLNode 
+trait OpenGLNode {
+	def display(view: OpenGLView)
+}

@@ -3,8 +3,7 @@ package com.yayetee.winko.engine
 import com.yayetee.tuio._
 import com.yayetee.apps.demo.Demo
 import com.yayetee.opengl.OpenGLDisplay
-import com.yayetee.winko.graphics.EventListener
-
+import com.yayetee.winko.graphics.{OpenGLView}
 
 abstract class Application extends Factory
 
@@ -14,7 +13,7 @@ object Engine {
 	def main(args: Array[String]){
 		client.connect
 
-		val display = new OpenGLDisplay("w.i.n.k.o", new EventListener)
+		val display = new OpenGLDisplay("w.i.n.k.o", new OpenGLView)
 		display.start
 	}
 

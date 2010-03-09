@@ -2,7 +2,7 @@ package com.yayetee.apps.demo
 
 import com.yayetee.winko.engine.{WSymbol, Application}
 import com.yayetee.tuio.{Symbol, Cursor, Logger}
-import com.yayetee.winko.graphics.EventListener
+import com.yayetee.winko.graphics.{OpenGLView}
 
 /**
  * User: teamon
@@ -21,8 +21,12 @@ class Square(sym: Symbol) extends WSymbol(sym) {
 		Logger.debug("Square removed")
 	}
 
-	def display(e: EventListener){
-		
+	def display(v: OpenGLView){
+		Logger.debug("(%f, %f)", x, y)
+
+		v.translate(x, y)
+		v.rotate(30)
+		v.rect(-50, -50, 100, 100)
 	}
 }
 
@@ -37,7 +41,7 @@ class Circle(sym: Symbol) extends WSymbol(sym) {
 		Logger.debug("Circle removed")
 	}
 
-	def display(e: EventListener){
+	def display(v: OpenGLView){
 
 	}
 }

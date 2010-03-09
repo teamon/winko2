@@ -25,8 +25,8 @@ class OpenGLDisplay(title: String, val width: Int, val height: Int, val eventLis
 	frame.getContentPane.setLayout(new BorderLayout)
 	frame.getContentPane.add(glCanvas, BorderLayout.CENTER)
 
-	val animator = new FPSAnimator(glCanvas, 60)
-	animator.setRunAsFastAsPossible(false)
+	val animator = new FPSAnimator(glCanvas, 500)
+	animator.setRunAsFastAsPossible(true)
 
 	def this(title: String, width: Int, height: Int, eventListener: GLEventListener) = this (title, width, height, eventListener, false, new GLCapabilities)
 

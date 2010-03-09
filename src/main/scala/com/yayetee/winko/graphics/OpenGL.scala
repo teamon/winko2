@@ -1,7 +1,7 @@
 package com.yayetee.winko.graphics
 
+import com.yayetee.opengl.{OpenGL2DEventListener}
 import javax.media.opengl.GL
-import com.yayetee.opengl.{OpenGLDisplay, OpenGL2DEventListener}
 
 /**
  * OpenGL 2D Event listener
@@ -10,84 +10,46 @@ import com.yayetee.opengl.{OpenGLDisplay, OpenGL2DEventListener}
  */
 class EventListener extends OpenGL2DEventListener {
 	import GL._
-	
+
 	def init {
 		gl.glShadeModel(GL_SMOOTH)
 		gl.glClearColor(0f, 0f, 0f, 0f)
 		gl.glDepthFunc(GL_LEQUAL)
-		gl.glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST)
+		//		gl.glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST)
+
+		//		gl.glEnable(GL.GL_POINT_SMOOTH);
+		//    gl.glEnable(GL.GL_LINE_SMOOTH);
+		//    gl.glEnable(GL.GL_POLYGON_SMOOTH);
+
+		//		gl.glBlendFunc(GL_SRC_ALPHA_SATURATE, GL_ONE)
+		//		gl.glEnable(GL_BLEND)
+		//		gl.glEnable(GL_POLYGON_SMOOTH)
+
 
 		enable2D
 	}
 
-	def reshape(x: Int, y: Int, width: Int, height: Int) {}
+	def reshape(x: Int, y: Int, width: Int, height: Int) {
+		enable2D
+	}
 
 	def displayChanged(modeChanged: Boolean, deviceChanged: Boolean) {}
 
 	def display {
-		gl.glClear(GL.GL_COLOR_BUFFER_BIT)
-		gl.glLoadIdentity
+		clear(GL_COLOR_BUFFER_BIT)
+		loadIdentity
 
+		pushMatrix
+		translate(100, 100)
+		fill(0xFF, 0, 0)
+		rect(0, 0, 300, 300)
+		rotate(63)
+		fill(0f, 0f, 1f)
+		rect(0, 0, 300, 300)
+		popMatrix
 
-		def drawRectangle_ZPlane(posX: Float, posY: Float, sizeX: Float, sizeY:Float) {
-			gl.glBegin(GL_QUADS)
-			gl.glVertex2d(posX,       posY+sizeY)
-			gl.glVertex2d(posX,       posY)
-			gl.glVertex2d(posX+sizeX, posY)
-			gl.glVertex2d(posX+sizeX, posY+sizeY)
-			gl.glEnd
-		}
-
-		gl.glPushMatrix
-		gl.glTranslated(100, 100, 0)
-		gl.glColor3d(1,0,0)
-		drawRectangle_ZPlane(0, 0, 30, 30)
-
-		gl.glRotated(60, 0, 0, 1)
-
-		gl.glColor3d(0, 0, 1)
-		drawRectangle_ZPlane(0, 0, 30, 30)
-		
-		gl.glPopMatrix
-		
-		//drawRectangle_ZPlane(100, 100, 30, 30)
-
-//		glu.gluOrtho2D()
-
-//		gl.glPushMatrix
-//			gl.glTranslated(0.5, 0.5, 0)
-//			gl.glRotated(30, 0, 0, 1)
-//			gl.glBegin(GL.GL_LINES)
-//				gl.glColor3d(1, 0, 0)
-//				gl.glVertex2d(-1.0, 0.0)
-//        gl.glVertex2d(1, 0.0)
-//
-//				gl.glColor3d(0, 0, 1)
-//        gl.glVertex2d(0.0, -1.0)
-//        gl.glVertex2d(0.0, 1.0)
-//      gl.glEnd
-//		gl.glPopMatrix
-
-//		gl.glPushMatrix
-//			gl.glRotated(30, 0, 0, 1)
-//			gl.glBegin(GL.GL_QUADS)
-//				gl.glColor3d(0, 1, 0)
-//				gl.glVertex2d(0.2, 0.2)
-//				gl.glVertex2d(0.4, 0.2)
-//				gl.glVertex2d(0.4, 0.4)
-//				gl.glVertex2d(0.2, 0.4)
-//			gl.glEnd
-//		gl.glPopMatrix
-
-
-//		disable2D
+		gl.glFinish
+		gl.glFlush
 	}
 }
 
-
-object OpenGL {
-	def main(args: Array[String]) {
-		val display = new OpenGLDisplay("TEST", new EventListener)
-		display.start
-	}
-}

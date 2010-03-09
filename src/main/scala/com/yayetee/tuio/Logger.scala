@@ -23,6 +23,16 @@ object Logger {
 		print("\n")
 	}
 
+	def error(msg: String) {
+		println("[ERROR] " + msg)
+	}
+
+	def error(pattern: String, args: Any*) {
+		print("[ERROR] ")
+		printf(pattern, args: _*)
+		print("\n")
+	}
+
 	protected def from : String = {
 		return ""
 		val from = try {

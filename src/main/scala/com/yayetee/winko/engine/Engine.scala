@@ -2,22 +2,21 @@ package com.yayetee.winko.engine
 
 import com.yayetee.tuio._
 import com.yayetee.apps.demo.Demo
-import com.yayetee.winko.graphics.OpenGL
+import com.yayetee.opengl.OpenGLDisplay
+import com.yayetee.winko.graphics.EventListener
 
-/**
- * User: teamon
- * Date: 2010-03-04
- * Time: 23:28:44
- */
 
 abstract class Application extends Factory
 
 object Engine {
-	val client = new Client(0, Demo)
+	val client = new Client(3333, Demo)
 
-//	def main(args: Array[String]){
-////		OpenGL.init
-//	}
+	def main(args: Array[String]){
+		client.connect
+
+		val display = new OpenGLDisplay("w.i.n.k.o", new EventListener)
+		display.start
+	}
 
 	def symbols = client.symbols
 	def cursors = client.cursors

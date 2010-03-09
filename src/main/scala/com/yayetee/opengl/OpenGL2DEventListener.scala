@@ -9,6 +9,8 @@ import javax.media.opengl.glu.GLU
  * @author Tymon Tobolski
  */
 abstract class OpenGL2DEventListener extends GLEventListener {
+	import GL._
+	
 	var drawable: GLAutoDrawable = _
 	var gl: GL = _
 	var glu: GLU = _
@@ -69,5 +71,37 @@ abstract class OpenGL2DEventListener extends GLEventListener {
 		gl.glMatrixMode(GL_MODELVIEW)
 		gl.glPopMatrix
 	}
+
+
+
+	// helpers
+
+	def rect(x: Float, y: Float, width: Float, height: Float) {
+		gl.glBegin(GL_QUADS)
+		gl.glVertex2d(x, y + height)
+		gl.glVertex2d(x, y)
+		gl.glVertex2d(x + width, y)
+		gl.glVertex2d(x + width, y + height)
+		gl.glEnd
+	}
+
+	def pushMatrix = gl.glPushMatrix
+
+	def popMatrix = gl.glPopMatrix
+
+	def clear(c: Int) = gl.glClear(c)
+
+	def loadIdentity = gl.glLoadIdentity
+
+	def translate(x: Double, y: Double) = gl.glTranslated(x, y, 0)
+
+	def rotate(a: Double) = gl.glRotated(a, 0, 0, 1)
+
+	def fill(r: Float, g: Float, b: Float) = gl.glColor3f(r, g, b)
+
+	def fill(r: Int, g: Int, b: Int) = gl.glColor3f(r / 255f, g / 255f, b / 255f)
+
+	def fill(rgb: Int):Unit = fill(rgb/(256*256), (rgb/256)%256 , rgb%256)
+
 }
 

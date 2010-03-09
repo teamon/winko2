@@ -4,25 +4,27 @@ import com.illposed.osc.{OSCMessage, OSCPortIn, OSCListener}
 import java.util.Date
 import collection.mutable.{ListBuffer, HashMap}
 
-class Client(val port:Int, val factory: Factory) extends OSCListener {
-	val symbols= new HashMap[Long, Symbol]
+class Client(val port: Int, val factory: Factory) extends OSCListener {
+	val symbols = new HashMap[Long, Symbol]
 	val aliveSymbols = new ListBuffer[Long]
 
 	val cursors = new HashMap[Long, Cursor]
 	val aliveCursors = new ListBuffer[Long]
 
-	val osc = new OSCPortIn(port)
+	def connect {
+		val osc = new OSCPortIn(port)
 
-	try {
-		osc.addListener("/tuio/2Dobj", this)
-		osc.addListener("/tuio/2Dcur", this)
-		osc.startListening
-	} catch {
-		case _ => Logger.info("Failed to connect")
+		try {
+			osc.addListener("/tuio/2Dobj", this)
+			osc.addListener("/tuio/2Dcur", this)
+			osc.startListening
+		} catch {
+			case _ => Logger.error("Failed to connect")
+		}
 	}
 
 
-	def acceptMessage(date: Date, message: OSCMessage){
+	def acceptMessage(date: Date, message: OSCMessage) {
 		val args = message.getArguments
 		val command = args(0).toString
 		val address = message.getAddress
@@ -94,7 +96,7 @@ class Client(val port:Int, val factory: Factory) extends OSCListener {
 				}
 			}
 		}
-Logger.debug("symobls: " + symbols.toString)
+
 	}
-	
+
 }

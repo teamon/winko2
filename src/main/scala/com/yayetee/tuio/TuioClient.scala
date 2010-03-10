@@ -5,8 +5,23 @@ import java.util.Date
 import collection.mutable.{ListBuffer, HashMap}
 import com.yayetee.Tools
 
-class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) extends OSCListener {
-	def logger = Tools.logger(Client.getClass)
+/**
+ * TuioClient
+ *
+ * Main class of Tuio library
+ *
+ * @param port Tuio port for connection (default 3333)
+ * @author teamon
+ * @see TuioSymbol
+ * @see TuioCursor
+ *
+ * @todo Take care of frame loss
+ */
+
+class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: TuioFactory[S, C]) extends OSCListener {
+	def this(factory: TuioFactory[S,C]) = this(3333, factory)
+
+	def logger = Tools.logger(this.getClass)
 	
 	val symbols = new HashMap[Long, S]
 	val aliveSymbols = new ListBuffer[Long]
@@ -14,6 +29,12 @@ class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) exte
 	val cursors = new HashMap[Long, C]
 	val aliveCursors = new ListBuffer[Long]
 
+
+	/**
+	 * Connect to Tuio OSC port
+	 *
+	 * @author teamon
+	 */
 	def connect {
 		val osc = new OSCPortIn(port)
 
@@ -21,11 +42,19 @@ class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) exte
 			osc.addListener("/tuio/2Dobj", this)
 			osc.addListener("/tuio/2Dcur", this)
 			osc.startListening
+			logger.info("Tuio client connected on port " + port)
 		} catch {
-			case _ => logger.error("Failed to connect")
+			case _ => logger.error("Failed to connect to TUIO on port " + port)
 		}
 	}
 
+	/**
+	 * Accepts OSC message
+	 *
+	 * @author teamon
+	 *
+	 * @todo Add more fields from Tuio
+	 */
 
 	def acceptMessage(date: Date, message: OSCMessage) {
 		val args = message.getArguments
@@ -39,6 +68,7 @@ class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) exte
 					val cid = args(2).asInstanceOf[Int]
 					val xpos = args(3).asInstanceOf[Float]
 					val ypos = args(4).asInstanceOf[Float]
+					// TODO: Add more fields
 
 					symbols.get(sid) match {
 						case Some(sym) => {
@@ -46,7 +76,7 @@ class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) exte
 							aliveSymbols += sid
 						}
 						case None => {
-							val sym = factory.createSymbol(new Symbol(sid, cid, xpos, ypos))
+							val sym = factory.createSymbol(sid, cid, xpos, ypos)
 							symbols(sid) = sym
 							aliveSymbols += sid
 						}
@@ -72,6 +102,7 @@ class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) exte
 					val sid = args(1).asInstanceOf[Int].toLong
 					val xpos = args(2).asInstanceOf[Float]
 					val ypos = args(3).asInstanceOf[Float]
+					// TODO: Add more fields
 
 					cursors.get(sid) match {
 						case Some(cur) => {
@@ -79,7 +110,7 @@ class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) exte
 							aliveCursors += sid
 						}
 						case None => {
-							val cur = factory.createCursor(new Cursor(sid, xpos, ypos))
+							val cur = factory.createCursor(sid, xpos, ypos)
 							cursors(sid) = cur
 							aliveCursors += sid
 						}

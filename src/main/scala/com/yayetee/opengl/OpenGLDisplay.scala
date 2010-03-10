@@ -9,7 +9,7 @@ import javax.media.opengl.{GLCapabilities, GLCanvas, GLEventListener}
 /**
  * Main OpenGL display class
  *
- * @author Tymon Tobolski
+ * @author teamon
  */
 
 class OpenGLDisplay(title: String, val width: Int, val height: Int, val eventListener: GLEventListener, val fullscreen: Boolean, caps: GLCapabilities) {

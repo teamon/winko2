@@ -6,7 +6,7 @@ import com.yayetee.tuio.Logger
 /**
  * Basic callbacks trait
  *
- * @author Tymon Tobolski
+ * @author teamon
  */
 
 trait Hooks {

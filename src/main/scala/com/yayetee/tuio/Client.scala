@@ -3,8 +3,11 @@ package com.yayetee.tuio
 import com.illposed.osc.{OSCMessage, OSCPortIn, OSCListener}
 import java.util.Date
 import collection.mutable.{ListBuffer, HashMap}
+import com.yayetee.Tools
 
 class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) extends OSCListener {
+	def logger = Tools.logger(Client.getClass)
+	
 	val symbols = new HashMap[Long, S]
 	val aliveSymbols = new ListBuffer[Long]
 
@@ -19,7 +22,7 @@ class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) exte
 			osc.addListener("/tuio/2Dcur", this)
 			osc.startListening
 		} catch {
-			case _ => Logger.error("Failed to connect")
+			case _ => logger.error("Failed to connect")
 		}
 	}
 

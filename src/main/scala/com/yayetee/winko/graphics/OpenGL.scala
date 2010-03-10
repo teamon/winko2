@@ -7,7 +7,7 @@ import com.yayetee.winko.engine.{WSymbol, Engine}
 /**
  * OpenGL 2D Event listener
  *
- * @author Tymon Tobolski
+ * @author teamon
  */
 class OpenGLView extends OpenGL2DEventListener {
 	import GL._

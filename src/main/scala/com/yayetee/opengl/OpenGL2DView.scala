@@ -4,11 +4,11 @@ import javax.media.opengl.{GLAutoDrawable, GLEventListener, GL}
 import javax.media.opengl.glu.GLU
 
 /**
- * OpenGL 2D Event listener
+ * OpenGL 2D View 
  *
- * @author Tymon Tobolski
+ * @author teamon
  */
-abstract class OpenGL2DEventListener extends GLEventListener {
+abstract class OpenGL2DView extends GLEventListener {
 	import GL._
 	
 	var drawable: GLAutoDrawable = _

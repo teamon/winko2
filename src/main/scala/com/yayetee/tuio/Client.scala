@@ -4,11 +4,11 @@ import com.illposed.osc.{OSCMessage, OSCPortIn, OSCListener}
 import java.util.Date
 import collection.mutable.{ListBuffer, HashMap}
 
-class Client(val port: Int, val factory: Factory) extends OSCListener {
-	val symbols = new HashMap[Long, Symbol]
+class Client[S <: Symbol, C <: Cursor](val port: Int, val factory: Factory) extends OSCListener {
+	val symbols = new HashMap[Long, S]
 	val aliveSymbols = new ListBuffer[Long]
 
-	val cursors = new HashMap[Long, Cursor]
+	val cursors = new HashMap[Long, C]
 	val aliveCursors = new ListBuffer[Long]
 
 	def connect {

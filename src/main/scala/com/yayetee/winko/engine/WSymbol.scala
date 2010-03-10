@@ -13,11 +13,11 @@ abstract class WSymbol(sym: Symbol) extends Symbol(sym) with Hooks with OpenGLNo
 
 	override def update(xp: Float, yp: Float){
 		super.update(xp, yp)
-		runHooks("onUpdate")
+    runOnUpdateHooks
 	}
 
 	override def remove {
 		super.remove
-		runHooks("onRemove")
+    runOnRemoveHooks
 	}
 }

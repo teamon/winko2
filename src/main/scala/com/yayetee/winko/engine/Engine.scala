@@ -8,7 +8,7 @@ import com.yayetee.winko.graphics.{OpenGLView}
 abstract class Application extends Factory
 
 object Engine {
-	val client = new Client(3333, Demo)
+	val client = new Client[WSymbol, Cursor](3333, Demo)
 
 	def main(args: Array[String]){
 		client.connect

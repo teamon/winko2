@@ -10,24 +10,18 @@ import com.yayetee.tuio.Logger
  */
 
 trait Hooks {
-	val hooks = new HashMap[String, ListBuffer[() => Unit]]
+	val onUpdateHooks = new ListBuffer[() => Unit]
+	val onRemoveHooks = new ListBuffer[() => Unit]
 
 	def onUpdate(f: => Unit){
-		hooksList("onUpdate").append(f _)
+		onUpdateHooks.append(f _)
 	}
 
 	def onRemove(f: => Unit){
-		hooksList("onRemove").append(f _)
+		onRemoveHooks.append(f _)
 	}
 
-	def runHooks(key: String){
-		hooksList(key).foreach(f => f())
-	}
+	def runOnUpdateHooks = onUpdateHooks.foreach(f => f())
+	def runOnRemoveHooks = onUpdateHooks.foreach(f => f())
 
-	protected def hooksList(key: String): ListBuffer[() => Unit] = {
-		if(!hooks.contains(key)){
-			hooks += (key -> new ListBuffer[() => Unit])
-		}
-		hooks.get(key).get
-	}
 }

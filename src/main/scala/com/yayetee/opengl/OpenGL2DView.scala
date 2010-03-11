@@ -76,7 +76,19 @@ abstract class OpenGL2DView extends GLEventListener {
 
 	// helpers
 
+	object RectMode extends Enumeration {
+    type RectMode = Value
+    val Corner, Center = Value
+  }
+
+	var rectMode = RectMode.Center
+
 	def rect(x: Float, y: Float, width: Float, height: Float) {
+		if(rectMode == RectMode.Center) drawRect(x-width/2, y-height/2, width, height)
+		else drawRect(x, y, width, height)
+	}
+
+	protected def drawRect(x: Float, y: Float, width: Float, height: Float){
 		gl.glBegin(GL_QUADS)
 		gl.glVertex2d(x, y + height)
 		gl.glVertex2d(x, y)

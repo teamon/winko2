@@ -2,7 +2,7 @@
 //
 //import com.yayetee.winko.engine.{WSymbol, Application}
 //import com.yayetee.tuio.{Symbol, Cursor, Logger}
-//import com.yayetee.winko.graphics.{OpenGLView}
+//import com.yayetee.winko.graphics.{View}
 //
 ///**
 // * User: teamon
@@ -21,7 +21,7 @@
 //		Logger.debug("Square removed")
 //	}
 //
-//	def display(v: OpenGLView){
+//	def display(v: View){
 //		Logger.debug("(%f, %f)", x, y)
 //
 //		v.translate(x, y)
@@ -41,7 +41,7 @@
 //		Logger.debug("Circle removed")
 //	}
 //
-//	def display(v: OpenGLView){
+//	def display(v: View){
 //
 //	}
 //}

@@ -14,22 +14,22 @@ import com.yayetee.Tools._
 object Mash {
 	val resolution = 640 x 480
 	val logger = Tools.logger(Mash.getClass)
-	val client = new TuioClient[MashSymbol, MashCursor](3333, AppLauncher)
+	var app = AppLauncher
+	val client = new TuioClient[MashSymbol, MashCursor](3333, app)
 
-	val gfxNodes = new ListBuffer[OpenGLNode]
+	val gfxNodes = new ListBuffer[GfxNode]
 
 	def main(args: Array[String]) {
 		client.connect
-		val display = new OpenGLDisplay("w.i.n.k.o", resolution.width, resolution.height, new OpenGLView)
+		val display = new OpenGLDisplay("w.i.n.k.o", resolution.width, resolution.height, new View)
 		display.start
-		AppLauncher.start
+		app.start
 	}
 
 	def symbols = client.symbols
 
 	def cursors = client.cursors
 
-	scala.Predef
 }
 
 /**
@@ -38,7 +38,7 @@ object Mash {
  * @author teamon
  */
 
-abstract class Application extends TuioFactory[MashSymbol, MashCursor] {
+abstract class Application extends TuioFactory[MashSymbol, MashCursor] with GfxNodesManager {
 	def start
 }
 

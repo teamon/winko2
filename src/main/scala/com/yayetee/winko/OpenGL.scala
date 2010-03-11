@@ -10,7 +10,7 @@ import collection.mutable.ListBuffer
  *
  * @author teamon
  */
-class OpenGLView extends OpenGL2DView {
+class View extends OpenGL2DView {
 	import GL._
 	
 	def init {
@@ -40,6 +40,8 @@ class OpenGLView extends OpenGL2DView {
 		clear(GL_COLOR_BUFFER_BIT)
 		loadIdentity
 
+		Mash.app.displayGfxNodes(this)
+
 		Mash.symbols.foreach {
 			case (sid, sym) => {
 				pushMatrix
@@ -53,20 +55,20 @@ class OpenGLView extends OpenGL2DView {
 	}
 }
 
-trait OpenGLNodesManager {
-	val gfxNodes = new ListBuffer[OpenGLNode]
+trait GfxNodesManager {
+	val gfxNodes = new ListBuffer[GfxNode]
 
-	def addGfxNode(node: OpenGLNode){
+	def addGfxNode(node: GfxNode){
 		gfxNodes += node
 	}
 
-	def displayGfxNodes(view: OpenGLView) {
+	def displayGfxNodes(view: View) {
 		gfxNodes.foreach(_.display(view))
 	}
 }
 
-trait OpenGLNode {
+trait GfxNode {
 
 
-	def display(view: OpenGLView)
+	def display(view: View)
 }

@@ -10,7 +10,7 @@ import com.yayetee.tuio.TuioCursor
  *
  * @author teamon
  */
-class MashCursor(xpos: Float, ypos: Float) extends TuioCursor(xpos, ypos) with Hooks with OpenGLNodesManager {
+class MashCursor(xpos: Float, ypos: Float) extends TuioCursor(xpos, ypos) with Hooks with GfxNodesManager {
 	override def update(xp: Float, yp: Float) {
 		super.update(xp, yp)
 		runOnUpdateHooks

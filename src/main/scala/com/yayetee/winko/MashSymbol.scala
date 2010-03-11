@@ -10,7 +10,7 @@ import com.yayetee.tuio.TuioSymbol
  *
  * @author teamon
  */
-class MashSymbol(xp: Float, yp: Float) extends TuioSymbol(xp, yp) with Hooks with OpenGLNodesManager {
+class MashSymbol(xp: Float, yp: Float) extends TuioSymbol(xp, yp) with Hooks with GfxNodesManager {
 
 	override def update(xp: Float, yp: Float) {
 		super.update(xp, yp)
@@ -22,11 +22,6 @@ class MashSymbol(xp: Float, yp: Float) extends TuioSymbol(xp, yp) with Hooks wit
 		runOnRemoveHooks
 	}
 
-	def x = {
-		Mash.logger.debug(xpos)
-		Mash.logger.debug(Mash.resolution.width)
-		xpos * Mash.resolution.width
-	}
-
+	def x = xpos * Mash.resolution.width
 	def y = (1f - ypos) * Mash.resolution.height
 }

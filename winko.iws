@@ -200,10 +200,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppLauncher.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppLauncher.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="26" selection-start="82" selection-end="82" vertical-scroll-proportion="0.08988764">
+            <state line="17" column="13" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TuioNode.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="4" selection-start="377" selection-end="377" vertical-scroll-proportion="0.6213592">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TuioFactory.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="6" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -453,6 +471,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yayetee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tuio" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -876,26 +924,9 @@
         <state line="12" column="56" selection-start="657" selection-end="657" vertical-scroll-proportion="-3.5009074" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="19" selection-start="227" selection-end="227" vertical-scroll-proportion="0.4038835" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="0.18640776" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="24" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="54" selection-start="562" selection-end="562" vertical-scroll-proportion="-0.1764706">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala">
@@ -947,9 +978,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="6" selection-start="395" selection-end="395" vertical-scroll-proportion="-2.2932038">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="82" selection-end="82" vertical-scroll-proportion="0.08988764">
+        <state line="17" column="13" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="6" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="4" selection-start="377" selection-end="377" vertical-scroll-proportion="0.6213592">
           <folding />
         </state>
       </provider>

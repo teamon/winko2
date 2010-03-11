@@ -19,10 +19,10 @@ import com.yayetee.Tools
  */
 
 class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: TuioFactory[S, C]) extends OSCListener {
-	def this(factory: TuioFactory[S,C]) = this(3333, factory)
+	def this(factory: TuioFactory[S, C]) = this (3333, factory)
 
 	def logger = Tools.logger(this.getClass)
-	
+
 	val symbols = new HashMap[Long, S]
 	val aliveSymbols = new ListBuffer[Long]
 
@@ -70,17 +70,11 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 					val ypos = args(4).asInstanceOf[Float]
 					// TODO: Add more fields
 
-					symbols.get(sid) match {
-						case Some(sym) => {
-							sym.update(xpos, ypos)
-							aliveSymbols += sid
-						}
-						case None => {
-							val sym = factory.createSymbol(sid, cid, xpos, ypos)
-							symbols(sid) = sym
-							aliveSymbols += sid
-						}
+					symbols.get(sid) map (_.update(xpos, ypos)) getOrElse {
+						symbols(sid) = factory.createSymbol(sid, cid, xpos, ypos)
 					}
+
+					aliveSymbols += sid
 
 				}
 				case "alive" => {
@@ -104,18 +98,11 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 					val ypos = args(3).asInstanceOf[Float]
 					// TODO: Add more fields
 
-					cursors.get(sid) match {
-						case Some(cur) => {
-							cur.update(xpos, ypos)
-							aliveCursors += sid
-						}
-						case None => {
-							val cur = factory.createCursor(sid, xpos, ypos)
-							cursors(sid) = cur
-							aliveCursors += sid
-						}
+					cursors.get(sid).map(_.update(xpos, ypos)) getOrElse {
+						cursors(sid) = factory.createCursor(sid, xpos, ypos)
 					}
 
+					aliveCursors += sid
 				}
 				case "alive" => {
 					aliveCursors.clear

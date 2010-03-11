@@ -6,7 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/winko.iws" afterPath="$PROJECT_DIR$/winko.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="winko.iws" />
@@ -200,28 +200,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TuioClient.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TuioClient.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="19" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tools.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="14" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TuioDump.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="$TEMPLATE$" selection-end="1573" vertical-scroll-proportion="0.256">
+            <state line="89" column="9" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.41911766">
               <folding />
             </state>
           </provider>
@@ -242,22 +224,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Point.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioCursor.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Symbol.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioDump.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/Animation.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/example/TuioDump.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Engine.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" />
       </list>
     </option>
   </component>
@@ -401,6 +383,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="yayetee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yayetee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -644,7 +656,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.TuioDump">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -739,7 +751,7 @@
       </method>
     </configuration>
     <configuration default="false" name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.yayetee.winko.engine.Engine" />
+      <option name="MAIN_CLASS_NAME" value="com.yayetee.winko.Mash" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -835,7 +847,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="211" y="43" width="1330" height="881" extended-state="$TEMPLATE$" />
+    <frame x="109" y="39" width="1453" height="915" extended-state="$TEMPLATE$" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -850,9 +862,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.66214687" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25488722" sideWeight="0.65185183" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23331039" sideWeight="0.6658768" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33950618" sideWeight="0.9028213" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258294" sideWeight="0.9972471" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -959,20 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="6" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="$TEMPLATE$" selection-start="146" selection-end="289" vertical-scroll-proportion="0.33396584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/illposed/osc/OSCListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="3" selection-start="386" selection-end="386" vertical-scroll-proportion="0.29357797">
@@ -987,41 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="$TEMPLATE$" selection-end="536" vertical-scroll-proportion="0.14322251">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGL.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="$TEMPLATE$" selection-end="1337" vertical-scroll-proportion="0.064">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="2" selection-start="470" selection-end="470" vertical-scroll-proportion="0.704">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="$TEMPLATE$" selection-start="537" selection-end="537" vertical-scroll-proportion="0.736">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Hooks.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="$TEMPLATE$" selection-end="567" vertical-scroll-proportion="0.352">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/Animation.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="8" selection-start="$TEMPLATE$" selection-end="737" vertical-scroll-proportion="0.785567">
@@ -1029,30 +992,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/graphics/OpenGLNode.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="$TEMPLATE$" selection-start="173" selection-end="173" vertical-scroll-proportion="0.352">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="19" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="138" selection-end="138" vertical-scroll-proportion="0.0">
+        <state line="10" column="14" selection-start="138" selection-end="138" vertical-scroll-proportion="0.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="$TEMPLATE$" selection-start="537" selection-end="537" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="172" selection-end="172" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="$TEMPLATE$" selection-start="870" selection-end="1013" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="80" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="30" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="$TEMPLATE$" selection-end="1573" vertical-scroll-proportion="0.256">
+        <state line="12" column="40" selection-start="$TEMPLATE$" selection-end="1573" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="6" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="1" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="9" selection-start="2135" selection-end="2135" vertical-scroll-proportion="0.41911766">
           <folding />
         </state>
       </provider>

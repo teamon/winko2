@@ -38,4 +38,11 @@ object Tools {
 
 	initLogger
 
+	// implicit wrappers
+	implicit def Int2Resolution(i: Int) = new Resolution(i)
+}
+
+class Resolution(val width: Int, val height: Int){
+  def this(w: Int) = this(w, 0)
+  def x(h: Int) = new Resolution(width, h)
 }

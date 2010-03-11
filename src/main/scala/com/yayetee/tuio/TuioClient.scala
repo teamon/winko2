@@ -88,8 +88,6 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 					})
 					aliveSymbols.clear
 				}
-
-
 			}
 			case "/tuio/2Dcur" => command match {
 				case "set" => {

@@ -1,7 +1,8 @@
 package com.yayetee.winko
 
-import javax.media.opengl.GL
 import com.yayetee.opengl.OpenGL2DView
+import javax.media.opengl.GL
+import collection.mutable.ListBuffer
 
 
 /**
@@ -11,7 +12,7 @@ import com.yayetee.opengl.OpenGL2DView
  */
 class OpenGLView extends OpenGL2DView {
 	import GL._
-
+	
 	def init {
 		gl.glShadeModel(GL_SMOOTH)
 		gl.glClearColor(0f, 0f, 0f, 0f)
@@ -26,7 +27,6 @@ class OpenGLView extends OpenGL2DView {
 		//		gl.glEnable(GL_BLEND)
 		//		gl.glEnable(GL_POLYGON_SMOOTH)
 
-
 		enable2D
 	}
 
@@ -40,26 +40,33 @@ class OpenGLView extends OpenGL2DView {
 		clear(GL_COLOR_BUFFER_BIT)
 		loadIdentity
 
-		Mash.symbols.foreach { case (sid, sym) => {
-			pushMatrix
-//			sym.display(this)
-			popMatrix
-		}}
-
-		pushMatrix
-//		translate(100, 100)
-//		fill(0xFF, 0, 0)
-//		rect(0, 0, 300, 300)
-//		rotate(63)
-//		fill(0f, 0f, 1f)
-//		rect(0, 0, 300, 300)
-		popMatrix
+		Mash.symbols.foreach {
+			case (sid, sym) => {
+				pushMatrix
+				sym.displayGfxNodes(this)
+				popMatrix
+			}
+		}
 
 		gl.glFinish
 		gl.glFlush
 	}
 }
 
+trait OpenGLNodesManager {
+	val gfxNodes = new ListBuffer[OpenGLNode]
+
+	def addGfxNode(node: OpenGLNode){
+		gfxNodes += node
+	}
+
+	def displayGfxNodes(view: OpenGLView) {
+		gfxNodes.foreach(_.display(view))
+	}
+}
+
 trait OpenGLNode {
+
+
 	def display(view: OpenGLView)
 }

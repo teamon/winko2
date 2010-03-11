@@ -8,6 +8,16 @@ import collection.mutable.ListBuffer
  *
  * Mix it in any class to get hooks for free
  *
+ * Example:
+ *  class Foo extends Hooks {
+ *    onUpdate {
+ *      println("UPDATED!")
+ *    }
+ *  }
+ *
+ *  val f = new Foo
+ *  f.runOnUpdateHooks
+ *
  * @author teamon
  */
 

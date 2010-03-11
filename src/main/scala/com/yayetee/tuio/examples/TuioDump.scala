@@ -9,36 +9,36 @@ import com.yayetee.Tools
  * Tuio usage example
  */
 
-class MySymbol(sessionID: Long, symbolID: Int, xpos: Float, ypos: Float) extends TuioSymbol(sessionID, symbolID, xpos, ypos) {
-	TuioDump.logger.info("MySymbol #" + sessionID + " created (" + xpos + ", " + ypos + ")")
+class MySymbol(xpos: Float, ypos: Float) extends TuioSymbol(xpos, ypos) {
+	TuioDump.logger.info(this + " created (" + xpos + ", " + ypos + ")")
 
 	override def update(xp: Float, yp: Float){
 		super.update(xp, yp)
-		TuioDump.logger.info("MySymbol #" + sessionID + " updated (" + xpos + ", " + ypos + ")")
+		TuioDump.logger.info(this + " updated (" + xpos + ", " + ypos + ")")
 	}
 
 	override def remove {
-		TuioDump.logger.info("MySymbol #" + sessionID + " removed")
+		TuioDump.logger.info(this + " removed")
 	}
 }
 
-class MyCursor(sessionID: Long, xpos: Float, ypos: Float) extends TuioCursor(sessionID, xpos, ypos) {
-	TuioDump.logger.info("MyCursor #" + sessionID + " created (" + xpos + ", " + ypos + ")")
+class MyCursor(xpos: Float, ypos: Float) extends TuioCursor(xpos, ypos) {
+	TuioDump.logger.info(this + " created (" + xpos + ", " + ypos + ")")
 
 	override def update(xp: Float, yp: Float){
 		super.update(xp, yp)
-		TuioDump.logger.info("MyCursor #" + sessionID + " updated (" + xpos + ", " + ypos + ")")
+		TuioDump.logger.info(this + " updated (" + xpos + ", " + ypos + ")")
 	}
 
 	override def remove {
-		TuioDump.logger.info("MyCursor #" + sessionID + " removed")
+		TuioDump.logger.info(this + " removed")
 	}
 }
 
 object MyFactory extends TuioFactory[MySymbol, MyCursor] {
-	def createSymbol(sessionID: Long, symbolID: Int, xpos: Float, ypos: Float) = new MySymbol(sessionID, symbolID, xpos, ypos)
+	def createSymbol(symbolID: Int, xpos: Float, ypos: Float) = new MySymbol(xpos, ypos)
 
-	def createCursor(sessionID: Long, xpos: Float, ypos: Float) = new MyCursor(sessionID, xpos, ypos)
+	def createCursor(xpos: Float, ypos: Float) = new MyCursor(xpos, ypos)
 }
 
 

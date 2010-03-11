@@ -10,18 +10,14 @@ import com.yayetee.tuio.TuioCursor
  *
  * @author teamon
  */
-class MashCursor(sessionID: Long, xpos: Float, ypos: Float) extends TuioCursor(sessionID, xpos, ypos) with Hooks with OpenGLNodesManager {
-	Mash.logger.debug("MashCursor #" + sessionID + " created (" + xpos + ", " + ypos + ")")
-
+class MashCursor(xpos: Float, ypos: Float) extends TuioCursor(xpos, ypos) with Hooks with OpenGLNodesManager {
 	override def update(xp: Float, yp: Float) {
 		super.update(xp, yp)
-		Mash.logger.debug("MashCursor #" + sessionID + " updated (" + xpos + ", " + ypos + ")")
 		runOnUpdateHooks
 	}
 
 	override def remove {
 		super.remove
-		Mash.logger.debug("MashCursor #" + sessionID + " removed")
 		runOnRemoveHooks
 	}
 

@@ -11,7 +11,7 @@ class Button(val parent: MashSymbol) extends OpenGLNode {
 	}
 }
 
-class T(sessionID: Long) extends MashSymbol(sessionID, 0, 0f, 0f){
+class T extends MashSymbol(0f, 0f){
 	addGfxNode(new Button(this))
 }
 
@@ -20,7 +20,7 @@ object AppLauncher extends Application {
 		
 	}
 	
-	def createSymbol(sessionID: Long, symbolID: Int, xpos: Float, ypos: Float) = new T(sessionID)
+	def createSymbol(symbolID: Int, xpos: Float, ypos: Float) = new T
 
-	def createCursor(sessionID: Long, xpos: Float, ypos: Float) = new MashCursor(sessionID, xpos, ypos)
+	def createCursor(xpos: Float, ypos: Float) = new MashCursor(xpos, ypos)
 }

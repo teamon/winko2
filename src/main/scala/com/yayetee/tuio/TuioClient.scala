@@ -71,7 +71,7 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 					// TODO: Add more fields
 
 					symbols.get(sid) map (_.update(xpos, ypos)) getOrElse {
-						symbols(sid) = factory.createSymbol(sid, cid, xpos, ypos)
+						symbols(sid) = factory.createSymbol(cid, xpos, ypos)
 					}
 
 					aliveSymbols += sid
@@ -97,7 +97,7 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 					// TODO: Add more fields
 
 					cursors.get(sid).map(_.update(xpos, ypos)) getOrElse {
-						cursors(sid) = factory.createCursor(sid, xpos, ypos)
+						cursors(sid) = factory.createCursor(xpos, ypos)
 					}
 
 					aliveCursors += sid

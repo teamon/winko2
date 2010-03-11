@@ -9,7 +9,7 @@ package com.yayetee.tuio
  */
 
 trait TuioFactory[S, C] {
-	def createSymbol(sessionID: Long, symbolID: Int, xpos: Float, ypos: Float): S
+	def createSymbol(symbolID: Int, xpos: Float, ypos: Float): S
 
-	def createCursor(sessionID: Long, xpos: Float, ypos: Float): C
+	def createCursor(xpos: Float, ypos: Float): C
 }

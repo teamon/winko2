@@ -10,18 +10,15 @@ import com.yayetee.tuio.TuioSymbol
  *
  * @author teamon
  */
-class MashSymbol(sessionID: Long, symbolID: Int, xp: Float, yp: Float) extends TuioSymbol(sessionID, symbolID, xp, yp) with Hooks with OpenGLNodesManager {
-//	Mash.logger.debug("MashSymbol #" + sessionID + " created (" + xpos + ", " + ypos + ")")
+class MashSymbol(xp: Float, yp: Float) extends TuioSymbol(xp, yp) with Hooks with OpenGLNodesManager {
 
 	override def update(xp: Float, yp: Float) {
 		super.update(xp, yp)
-//		Mash.logger.debug("MashSymbol #" + sessionID + " updated (" + xpos + ", " + ypos + ")")
 		runOnUpdateHooks
 	}
 
 	override def remove {
 		super.remove
-//		Mash.logger.debug("MashSymbol #" + sessionID + " removed")
 		runOnRemoveHooks
 	}
 

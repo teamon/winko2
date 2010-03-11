@@ -5,7 +5,7 @@ package com.yayetee.tuio
  *
  * Base class for TuioSymbol and TuioCursor
  */
-abstract class TuioNode(val sessionID: Long, var xpos: Float, var ypos: Float) {
+abstract class TuioNode(var xpos: Float, var ypos: Float) {
 	/**
 	 * Update node data, called by client on Tuio update message
 	 *
@@ -29,11 +29,11 @@ abstract class TuioNode(val sessionID: Long, var xpos: Float, var ypos: Float) {
  *
  * @author teamon
  */
-class TuioCursor(sid: Long, xp: Float, yp: Float) extends TuioNode(sid, xp, yp)
+class TuioCursor(xp: Float, yp: Float) extends TuioNode(xp, yp)
 
 /**
  * TuioSymbol class
  *
  * @author teamon
  */
-class TuioSymbol(sid: Long, val symbolID: Int, xp: Float, yp: Float) extends TuioNode(sid, xp, yp)
+class TuioSymbol(xp: Float, yp: Float) extends TuioNode(xp, yp)

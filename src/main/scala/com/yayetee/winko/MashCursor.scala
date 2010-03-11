@@ -38,5 +38,5 @@ class MashCursor(xp: Float, yp: Float) extends TuioCursor(xp, yp) with Hooks wit
 
 	def x = xpos * Mash.resolution.width
 
-	def y = (1f - ypos) * Mash.resolution.height
+	def y = ypos * Mash.resolution.height
 }

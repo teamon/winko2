@@ -1,10 +1,10 @@
 package com.yayetee.winko
 
-import com.yayetee.opengl.OpenGLDisplay
 import com.yayetee.Rectangle
+import com.yayetee.Tools._
 
 class Button(val parent: Application) extends GfxNode {
-	val boundingRect = new Rectangle(100, 100, 100, 100)
+	val boundingRect = new Rectangle(100, 100, 100 x 100)
 	
 	def display(v: View){
 		v.fill(0xFF, 0, 0)

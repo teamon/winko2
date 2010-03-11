@@ -2,7 +2,7 @@ package com.yayetee.opengl
 
 import javax.media.opengl.{GLAutoDrawable, GLEventListener, GL}
 import javax.media.opengl.glu.GLU
-import com.yayetee.Rectangle
+import com.yayetee.{RectMode, Rectangle}
 
 /**
  * OpenGL 2D View 
@@ -55,7 +55,7 @@ abstract class OpenGL2DView extends GLEventListener {
 		gl.glMatrixMode(GL_PROJECTION)
 		gl.glPushMatrix
 		gl.glLoadIdentity
-		gl.glOrtho(vPort.get(0), vPort.get(0) + vPort.get(2), vPort.get(1), vPort.get(1) + vPort.get(3), -1, 1)
+		gl.glOrtho(vPort.get(0), vPort.get(0) + vPort.get(2), vPort.get(1) + vPort.get(3), vPort.get(1), -1, 1)
 
 		gl.glMatrixMode(GL_MODELVIEW)
 		gl.glPushMatrix
@@ -77,10 +77,7 @@ abstract class OpenGL2DView extends GLEventListener {
 
 	// helpers
 
-	object RectMode extends Enumeration {
-    type RectMode = Value
-    val Corner, Center = Value
-  }
+
 
 	var rectMode = RectMode.Center
 

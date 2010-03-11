@@ -23,5 +23,5 @@ class MashSymbol(xp: Float, yp: Float) extends TuioSymbol(xp, yp) with Hooks wit
 	}
 
 	def x = xpos * Mash.resolution.width
-	def y = (1f - ypos) * Mash.resolution.height
+	def y = ypos * Mash.resolution.height
 }

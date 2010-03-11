@@ -47,10 +47,20 @@ class Size(val width: Int, val height: Int) {
 	def x(h: Int) = new Size(width, h)
 }
 
-class Rectangle(val x: Int, val y: Int, val width: Int, val height: Int) {
-	def this(xp: Int, yp: Int, size: Size) = this (xp, yp, size.width, size.height)
+object RectMode extends Enumeration {
+	type RectMode = Value
+	val Corner, Center = Value
+}
 
-	def contains(xp: Int, yp: Int) = x + width > xp && xp > x && y + height > yp && yp > y
+class Rectangle(val x: Int, val y: Int, val width: Int, val height: Int, val mode: RectMode.RectMode) {
+	def this(xp: Int, yp: Int, size: Size) = this (xp, yp, size.width, size.height, RectMode.Center)
+
+	def contains(xp: Int, yp: Int) = {
+		if (mode == RectMode.Center) x + (width / 2) > xp && xp > x - (width / 2) && y + (height / 2) > yp && yp > y - (height / 2)
+		else x + width > xp && xp > x && y + height > yp && yp > y
+	}
+
 
 	def contains(xp: Float, yp: Float): Boolean = contains(xp.toInt, yp.toInt)
+
 }

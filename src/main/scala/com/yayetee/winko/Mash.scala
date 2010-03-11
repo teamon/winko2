@@ -17,8 +17,6 @@ object Mash {
 	var app = AppLauncher
 	val client = new TuioClient[MashSymbol, MashCursor](3333, app)
 
-	val gfxNodes = new ListBuffer[GfxNode]
-
 	def main(args: Array[String]) {
 		client.connect
 		val display = new OpenGLDisplay("w.i.n.k.o", resolution.width, resolution.height, new View)

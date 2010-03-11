@@ -3,6 +3,7 @@ package com.yayetee.winko
 import com.yayetee.opengl.OpenGL2DView
 import javax.media.opengl.GL
 import collection.mutable.ListBuffer
+import com.yayetee.winko.engine.Hooks
 
 
 /**
@@ -50,6 +51,14 @@ class View extends OpenGL2DView {
 			}
 		}
 
+		Mash.cursors.foreach {
+			case (sid, cur) => {
+				pushMatrix
+				cur.displayGfxNodes(this)
+				popMatrix
+			}
+		}
+
 		gl.glFinish
 		gl.glFlush
 	}
@@ -67,8 +76,7 @@ trait GfxNodesManager {
 	}
 }
 
-trait GfxNode {
-
-
+trait GfxNode extends Hooks {
 	def display(view: View)
+	def contains(cursor: MashCursor) = false
 }

@@ -1,6 +1,7 @@
 package com.yayetee.winko.engine
 
 import collection.mutable.ListBuffer
+import com.yayetee.winko.MashCursor
 
 
 /**
@@ -24,24 +25,28 @@ import collection.mutable.ListBuffer
 trait Hooks {
 	val onUpdateHooks = new ListBuffer[() => Unit]
 	val onRemoveHooks = new ListBuffer[() => Unit]
+	val onCursorDownHooks = new ListBuffer[(MashCursor) => Unit]
 
 	/**
-	 * Add onUpdate hook
+	 * Add onUpdate hook called on object state update
 	 *
 	 * @author teamon
 	 */
-	def onUpdate(f: => Unit) {
-		onUpdateHooks.append(f _)
-	}
+	def onUpdate(f: => Unit) = onUpdateHooks.append(f _)
 
 	/**
-	 * Add onRemove hook
+	 * Add onRemove hook called on object removal
 	 *
 	 * @author teamon
 	 */
-	def onRemove(f: => Unit) {
-		onRemoveHooks.append(f _)
-	}
+	def onRemove(f: => Unit) = onRemoveHooks.append(f _)
+
+	/**
+	 * Add onCursorDown hook called on new cursor click within object bounds
+	 *
+	 * @author teamon
+	 */
+	def onCursorDown(f: (MashCursor) => Unit) = onCursorDownHooks.append(f)
 
 	/**
 	 * Run onUpdate hooks
@@ -56,5 +61,12 @@ trait Hooks {
 	 * @author teamon
 	 */
 	def runOnRemoveHooks = onUpdateHooks.foreach(f => f())
+
+		/**
+	 * Run onCursorDown hooks
+	 *
+	 * @author teamon
+	 */
+	def runOnCursorDownHooks(cursor: MashCursor) = onCursorDownHooks.foreach(f => f(cursor))
 
 }

@@ -2,6 +2,7 @@ package com.yayetee.opengl
 
 import javax.media.opengl.{GLAutoDrawable, GLEventListener, GL}
 import javax.media.opengl.glu.GLU
+import com.yayetee.Rectangle
 
 /**
  * OpenGL 2D View 
@@ -82,6 +83,8 @@ abstract class OpenGL2DView extends GLEventListener {
   }
 
 	var rectMode = RectMode.Center
+
+	def rect(r: Rectangle) { rect(r.x, r.y, r.width, r.height) }
 
 	def rect(x: Float, y: Float, width: Float, height: Float) {
 		if(rectMode == RectMode.Center) drawRect(x-width/2, y-height/2, width, height)

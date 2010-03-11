@@ -5,11 +5,10 @@ import org.apache.log4j._
 
 /**
  * Misc tools for everithing
- * 
+ *
  */
 
 object Tools {
-
 	def logger[T](c: Class[T]) = Logger.getLogger(c)
 
 	val appender = new ConsoleAppender
@@ -42,7 +41,16 @@ object Tools {
 	implicit def Int2Resolution(i: Int) = new Size(i)
 }
 
-class Size(val width: Int, val height: Int){
-  def this(w: Int) = this(w, 0)
-  def x(h: Int) = new Size(width, h)
+class Size(val width: Int, val height: Int) {
+	def this(w: Int) = this (w, 0)
+
+	def x(h: Int) = new Size(width, h)
+}
+
+class Rectangle(val x: Int, val y: Int, val width: Int, val height: Int) {
+	def this(xp: Int, yp: Int, size: Size) = this (xp, yp, size.width, size.height)
+
+	def contains(xp: Int, yp: Int) = x + width > xp && xp > x && y + height > yp && yp > y
+
+	def contains(xp: Float, yp: Float): Boolean = contains(xp.toInt, yp.toInt)
 }

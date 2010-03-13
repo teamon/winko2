@@ -1,10 +1,11 @@
 package com.yayetee.winko
 
+import apps.demo.Demo
 import com.yayetee.Rectangle
 import com.yayetee.Tools._
 
-class Button(val parent: Application) extends GfxNode {
-	val boundingRect = new Rectangle(100, 100, 100 x 100)
+class Button(index: Int) extends GfxNode {
+	val boundingRect = new Rectangle(100 + index*150, 100, 100 x 100)
 	
 	def display(v: View){
 		v.fill(0xFF, 0, 0)
@@ -15,13 +16,24 @@ class Button(val parent: Application) extends GfxNode {
 }
 
 object AppLauncher extends Application {
-	def start {
-		addGfxNode(new Button(this){
-			onCursorDown(cur => Mash.logger.debug("DON`T TOUCH ME!"))		
-		})
+	val applications = List(Demo)
+	
+	override def start {
+		applications.zipWithIndex.foreach {
+			case (app, i) => addGfxNode(new Button(i) {
+				onCursorDown(cur => {
+					Mash.logger.debug("Run " + app.name + " application")
+					Mash.run(Demo)
+				})
+			})
+		}
+
 	}
 	
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float) = new MashSymbol(xpos, ypos)
+	def createSymbol(symbolID: Int, xpos: Float, ypos: Float) = {
+		Mash.logger.debug("createSymbol appLauncher")		
+		new MashSymbol(xpos, ypos)
+	}
 
 	def createCursor(xpos: Float, ypos: Float) = new MashCursor(xpos, ypos)
 }

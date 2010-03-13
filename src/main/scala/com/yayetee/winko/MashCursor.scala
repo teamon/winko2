@@ -23,6 +23,7 @@ class MashCursor(xp: Float, yp: Float) extends TuioCursor(xp, yp) with Hooks wit
 	Mash.logger.debug(x + " x " + y)
 	Mash.logger.debug(Mash.app.gfxNodes.map(_.contains(this)))
 	Mash.app.gfxNodes.find(_.contains(this)).map(_.runOnCursorDownHooks(this))
+	Mash.symbols.foreach{ case (sid, sym) => sym.gfxNodes.find(_.contains(this)).map(_.runOnCursorDownHooks(this)) }
 
 	addGfxNode(new DebugCursorGfx(this))
 

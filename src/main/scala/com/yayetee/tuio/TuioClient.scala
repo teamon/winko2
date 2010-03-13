@@ -18,7 +18,7 @@ import com.yayetee.Tools
  * @todo Take care of frame loss
  */
 
-class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: TuioFactory[S, C]) extends OSCListener {
+class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, var factory: TuioFactory[S, C]) extends OSCListener {
 	def this(factory: TuioFactory[S, C]) = this (3333, factory)
 
 	def logger = Tools.logger(this.getClass)
@@ -28,6 +28,9 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 
 	val cursors = new HashMap[Long, C]
 	val aliveCursors = new ListBuffer[Long]
+	logger.debug("TuioClient new with " + factory)
+	val osc = new OSCPortIn(port)
+	logger.debug("TuioClient new with " + factory)
 
 
 	/**
@@ -36,8 +39,7 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 	 * @author teamon
 	 */
 	def connect {
-		val osc = new OSCPortIn(port)
-
+		logger.debug("connect with " + factory)
 		try {
 			osc.addListener("/tuio/2Dobj", this)
 			osc.addListener("/tuio/2Dcur", this)
@@ -46,6 +48,15 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 		} catch {
 			case _ => logger.error("Failed to connect to TUIO on port " + port)
 		}
+	}
+
+	/**
+	 * Disconnect from Tuio OSC port
+	 *
+	 * @author teamon
+	 */
+	def disconnect {
+		osc.stopListening
 	}
 
 	/**
@@ -71,6 +82,7 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, val factory: T
 					// TODO: Add more fields
 
 					symbols.get(sid) map (_.update(xpos, ypos)) getOrElse {
+						logger.debug("Create symbol from " + factory)
 						symbols(sid) = factory.createSymbol(cid, xpos, ypos)
 					}
 

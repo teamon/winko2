@@ -68,6 +68,7 @@ trait GfxNodesManager {
 	val gfxNodes = new ListBuffer[GfxNode]
 
 	def addGfxNode(node: GfxNode){
+		Mash.logger.debug("addGfxNode " + node)
 		gfxNodes += node
 	}
 

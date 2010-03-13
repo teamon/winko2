@@ -203,61 +203,34 @@
       <file leaf-file-name="AppLauncher.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+            <state line="22" column="49" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TuioNode.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="4" selection-start="377" selection-end="377" vertical-scroll-proportion="0.6213592">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TuioFactory.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="6" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpenGL2DView.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tools.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="62" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MashCursor.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MashCursor.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="14" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
+            <state line="25" column="114" selection-start="784" selection-end="784" vertical-scroll-proportion="1.1461318">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MashSymbol.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala">
+      <file leaf-file-name="OpenGL.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="3" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
+            <state line="43" column="25" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Demo.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="22" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -266,7 +239,7 @@
       <file leaf-file-name="Mash.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="$TEMPLATE$" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
+            <state line="28" column="30" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -282,22 +255,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" />
-        <option value="$PROJECT_DIR$/src/main/java/com/illposed/osc/OSCPortIn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/illposed/osc/OSCPortOut.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/demo/Demo.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala" />
       </list>
     </option>
   </component>
@@ -500,63 +473,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tuio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="winko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="winko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yayetee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opengl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="winko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="winko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scala" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yayetee" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -579,6 +496,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yayetee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tuio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="osc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -793,7 +788,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="56" width="1453" height="915" extended-state="$TEMPLATE$" />
+    <frame x="$TEMPLATE$" y="22" width="1280" height="730" extended-state="$TEMPLATE$" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -808,10 +803,10 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982794" sideWeight="0.6658768" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.66214687" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39986235" sideWeight="0.6658768" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23331039" sideWeight="0.6658768" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26484376" sideWeight="0.5720789" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982794" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258294" sideWeight="0.9972471" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41729894" sideWeight="0.9972471" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -904,16 +899,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/illposed/osc/OSCPort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="$TEMPLATE$" selection-start="393" selection-end="393" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="$TEMPLATE$" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.261343" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGLDisplay.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="33" selection-start="575" selection-end="575" vertical-scroll-proportion="-0.036608864" />
@@ -936,58 +921,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="$TEMPLATE$" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="4" selection-start="1034" selection-end="1034" vertical-scroll-proportion="-0.04868914">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="3" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="14" selection-start="915" selection-end="915" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="62" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="32" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="6" selection-start="395" selection-end="395" vertical-scroll-proportion="-2.2932038">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1001,7 +937,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="377" selection-end="377" vertical-scroll-proportion="0.6213592">
+        <state line="8" column="5" selection-start="157" selection-end="157" vertical-scroll-proportion="0.23970038">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="6" selection-start="220" selection-end="220" vertical-scroll-proportion="0.35955057">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="$TEMPLATE$" selection-start="793" selection-end="793" vertical-scroll-proportion="0.5093633">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="25" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/illposed/osc/OSCPortIn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="42" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.41947564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="69" selection-start="458" selection-end="458" vertical-scroll-proportion="0.09363296">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="30" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="49" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="114" selection-start="784" selection-end="784" vertical-scroll-proportion="1.1461318">
           <folding />
         </state>
       </provider>

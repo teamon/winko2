@@ -3,6 +3,7 @@ package com.yayetee.opengl
 import javax.media.opengl.{GLAutoDrawable, GLEventListener, GL}
 import javax.media.opengl.glu.GLU
 import com.yayetee.{RectMode, Rectangle}
+import Math._
 
 /**
  * OpenGL 2D View 
@@ -83,17 +84,71 @@ abstract class OpenGL2DView extends GLEventListener {
 
 	def rect(r: Rectangle) { rect(r.x, r.y, r.width, r.height) }
 
-	def rect(x: Float, y: Float, width: Float, height: Float) {
+	def rect(x: Double, y: Double, width: Double, height: Double) {
 		if(rectMode == RectMode.Center) drawRect(x-width/2, y-height/2, width, height)
 		else drawRect(x, y, width, height)
 	}
 
-	protected def drawRect(x: Float, y: Float, width: Float, height: Float){
+	protected def drawRect(x: Double, y: Double, width: Double, height: Double){
 		gl.glBegin(GL_QUADS)
 		gl.glVertex2d(x, y + height)
 		gl.glVertex2d(x, y)
 		gl.glVertex2d(x + width, y)
 		gl.glVertex2d(x + width, y + height)
+		gl.glEnd
+	}
+
+	/**
+	 * Draws a circle with center at the (x,y) point
+	 *
+	 * @author teamon
+	 *
+	 * @param x x-coordinate of circle center
+	 * @param y y-coordinate of circle center
+	 * @param radius radius of circle
+	 */
+	def circle(x: Double, y: Double, radius: Double) {
+		ellipse(x, y, radius, radius)
+	}
+
+	def ring(x: Double, y: Double, radius: Double, weight: Double) {
+		ellipseRing(x, y, radius, radius, weight)
+	}
+
+	def arc(x: Double, y: Double, radius: Double, weight: Double, angle: Double){
+		ellipseArc(x, y, radius, radius, weight, angle)
+	}
+
+	def ellipse(x: Double, y: Double, rx: Double, ry: Double) {
+		gl.glBegin(GL.GL_LINES)
+
+		(0.0 to Pi).by(0.001).foreach(a => {
+			val cosa = cos(a)
+			val sina = sin(a)
+			gl.glVertex2d(x + cosa*rx, y + sina*ry)
+			gl.glVertex2d(x - cosa*rx, y - sina*ry)
+		})
+
+		gl.glEnd
+	}
+
+	def ellipseRing(x: Double, y: Double, rx :Double, ry: Double, weight: Double) {
+		ellipseArc(x, y, rx, ry, weight, 2*Pi)
+	}
+
+	def ellipseArc(x: Double, y: Double, rx: Double, ry: Double, weight: Double, angle: Double) {
+		val rx_ = rx + weight
+		val ry_ = ry + weight
+
+		gl.glBegin(GL.GL_LINES)
+
+		(0.0 to angle).by(0.001).foreach(a => {
+			val cosa = cos(a)
+			val sina = sin(a)
+			gl.glVertex2d(x + cosa*rx, y + sina*ry)
+			gl.glVertex2d(x + cosa*rx_, y + sina*ry_)
+		})
+
 		gl.glEnd
 	}
 
@@ -109,7 +164,8 @@ abstract class OpenGL2DView extends GLEventListener {
 
 	def rotate(a: Double) = gl.glRotated(a, 0, 0, 1)
 
-	def fill(r: Float, g: Float, b: Float) = gl.glColor3f(r, g, b)
+	def fill(r: Double, g: Double, b: Double) = gl.glColor3d(r, g, b)
+
 
 	def fill(r: Int, g: Int, b: Int) = gl.glColor3f(r / 255f, g / 255f, b / 255f)
 

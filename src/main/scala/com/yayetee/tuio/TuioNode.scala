@@ -36,4 +36,16 @@ class TuioCursor(xp: Float, yp: Float) extends TuioNode(xp, yp)
  *
  * @author teamon
  */
-class TuioSymbol(xp: Float, yp: Float) extends TuioNode(xp, yp)
+class TuioSymbol(xp: Float, yp: Float, var angle: Float) extends TuioNode(xp, yp){
+		/**
+	 * Update node data, called by client on Tuio update message
+	 *
+	 * @author teamon
+	 */
+	def update(xp: Float, yp: Float, a: Float) {
+		super.update(xp, yp)
+		xpos = xp
+		ypos = yp
+		angle = a
+	}
+}

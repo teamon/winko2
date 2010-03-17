@@ -40,9 +40,9 @@ object AppLauncher extends Application {
 
 	}
 	
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float) = {
+	def createSymbol(symbolID: Int, xpos: Float, ypos: Float, angle: Float) = {
 		Mash.logger.debug("createSymbol appLauncher")		
-		new MashSymbol(xpos, ypos)
+		new MashSymbol(xpos, ypos, angle)
 	}
 
 	def createCursor(xpos: Float, ypos: Float) = new MashCursor(xpos, ypos)

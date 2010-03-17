@@ -34,13 +34,18 @@ object Note {
 	}
 }
 
-class Note(xp: Float, yp: Float, sym: Int) extends MashSymbol(xp, yp) {
+class Note(xp: Float, yp: Float, a: Float, sym: Int) extends MashSymbol(xp, yp, a) {
 	val loop = new Loop(500){
 		def tick {
 			Midi << Note.on(35, 100)
 		}
 	}
 	loop.start
+
+	
+	onUpdate {
+		loop.timeout = (angle * 900 / (2*Math.Pi)).toInt + 100
+	}
 
 	onRemove {
 		loop.stopIt
@@ -54,8 +59,8 @@ object Midi extends Application {
 
 	override def name = "MIDI"
 
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float) = symbolID match {
-		case _ => new Note(xpos, ypos, symbolID)
+	def createSymbol(symbolID: Int, xpos: Float, ypos: Float, a: Float) = symbolID match {
+		case _ => new Note(xpos, ypos, a, symbolID)
 	}
 
 	def createCursor(xpos: Float, ypos: Float) = new MashCursor(xpos, ypos)

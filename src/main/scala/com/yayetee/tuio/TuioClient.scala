@@ -80,10 +80,16 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, var factory: T
 					val xpos = args(3).asInstanceOf[Float]
 					val ypos = args(4).asInstanceOf[Float]
 					// TODO: Add more fields
+					val angle = args(5).asInstanceOf[Float]
+//				float xspeed = ((Float)args[6]).floatValue();
+//				float yspeed = ((Float)args[7]).floatValue();
+//				float rspeed = ((Float)args[8]).floatValue();
+//				float maccel = ((Float)args[9]).floatValue();
+//				float raccel = ((Float)args[10]).floatValue();
 
-					symbols.get(sid) map (_.update(xpos, ypos)) getOrElse {
+					symbols.get(sid) map (_.update(xpos, ypos, angle)) getOrElse {
 						logger.debug("Create symbol from " + factory)
-						symbols(sid) = factory.createSymbol(cid, xpos, ypos)
+						symbols(sid) = factory.createSymbol(cid, xpos, ypos, angle)
 					}
 
 					aliveSymbols += sid

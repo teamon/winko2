@@ -9,11 +9,11 @@ import com.yayetee.Tools
  * Tuio usage example
  */
 
-class MySymbol(xpos: Float, ypos: Float) extends TuioSymbol(xpos, ypos) {
+class MySymbol(xpos: Float, ypos: Float, angle: Float) extends TuioSymbol(xpos, ypos, angle) {
 	TuioDump.logger.info(this + " created (" + xpos + ", " + ypos + ")")
 
-	override def update(xp: Float, yp: Float){
-		super.update(xp, yp)
+	override def update(xp: Float, yp: Float, a: Float){
+		super.update(xp, yp, a)
 		TuioDump.logger.info(this + " updated (" + xpos + ", " + ypos + ")")
 	}
 
@@ -36,7 +36,7 @@ class MyCursor(xpos: Float, ypos: Float) extends TuioCursor(xpos, ypos) {
 }
 
 object MyFactory extends TuioFactory[MySymbol, MyCursor] {
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float) = new MySymbol(xpos, ypos)
+	def createSymbol(symbolID: Int, xpos: Float, ypos: Float, angle: Float) = new MySymbol(xpos, ypos, angle)
 
 	def createCursor(xpos: Float, ypos: Float) = new MyCursor(xpos, ypos)
 }

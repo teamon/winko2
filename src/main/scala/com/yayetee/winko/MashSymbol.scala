@@ -10,10 +10,10 @@ import com.yayetee.tuio.TuioSymbol
  *
  * @author teamon
  */
-class MashSymbol(xp: Float, yp: Float) extends TuioSymbol(xp, yp) with Hooks with GfxNodesManager {
+class MashSymbol(xp: Float, yp: Float, a: Float) extends TuioSymbol(xp, yp, a) with Hooks with GfxNodesManager {
 
-	override def update(xp: Float, yp: Float) {
-		super.update(xp, yp)
+	override def update(xp: Float, yp: Float, a: Float) {
+		super.update(xp, yp, a)
 		runOnUpdateHooks
 	}
 

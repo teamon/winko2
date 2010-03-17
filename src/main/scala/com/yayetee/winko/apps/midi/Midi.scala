@@ -1,13 +1,13 @@
 package com.yayetee.winko.apps.demo
 
 import com.yayetee.winko._
-import collection.mutable.ListBuffer
 import javax.sound.midi._
+import com.yayetee.tuio.Pos
 
 abstract class Loop(var timeout: Int) extends Thread {
 	var keep = true
 
-	def stopIt { keep = false }
+	def stopIt {keep = false}
 
 	override def run {
 		while (keep) {
@@ -34,22 +34,38 @@ object Note {
 	}
 }
 
-class Note(xp: Float, yp: Float, a: Float, sym: Int) extends MashSymbol(xp, yp, a) {
-	val loop = new Loop(500){
-		def tick {
-			Midi << Note.on(35, 100)
-		}
+trait Loops {
+	def loop(timeout: Int, f: Unit) = {
+		val l = new Loop(timeout) {def tick {f}}
+		l.start
+		l
 	}
-	loop.start
+}
 
-	
+class Tempo(pos: Pos) extends MashEmblem(pos) with Loops {
+	val tempo = loop(300, {
+		Midi << Note.on(35, 100)
+	})
+
 	onUpdate {
-		loop.timeout = (angle * 900 / (2*Math.Pi)).toInt + 100
+		tempo.timeout = (position.angle * 900 / (2 * Math.Pi)).toInt + 100
 	}
 
 	onRemove {
-		loop.stopIt
+		tempo.stopIt
 	}
+
+}
+
+class Note(pos: Pos) extends MashEmblem(pos) {
+	//	val loop = new Loop(500){
+	//		def tick {
+	//			Midi << Note.on(35, 100)
+	//		}
+	//	}
+	//	loop.start
+
+
 
 }
 
@@ -59,11 +75,11 @@ object Midi extends Application {
 
 	override def name = "MIDI"
 
-	def createSymbol(symbolID: Int, xpos: Double, ypos: Double, a: Double) = symbolID match {
-		case _ => new Note(xpos, ypos, symbolID)
+	def createEmblem(symbolID: Int, pos: Pos) = symbolID match {
+		case _ => new Note(pos)
 	}
 
-	def createCursor(xpos: Double, ypos: Double) = new MashCursor(xpos, ypos)
+	def createFinger(pos: Pos) = new MashFinger(pos)
 
 	def <<(msg: MidiMessage) {
 		receiver match {
@@ -84,7 +100,7 @@ object Midi extends Application {
 			receiver = if (rec != null) Some(rec) else None
 		})
 
-	
+
 		val msg = new ShortMessage
 		msg.setMessage(ShortMessage.PROGRAM_CHANGE, 9, 1, 0)
 		this << msg

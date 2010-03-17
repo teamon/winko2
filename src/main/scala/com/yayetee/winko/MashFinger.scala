@@ -1,10 +1,10 @@
 package com.yayetee.winko
 
 import com.yayetee.winko.engine.Hooks
-import com.yayetee.tuio.TuioCursor
+import com.yayetee.tuio._
 
-class DebugCursorGfx(parent: MashCursor) extends GfxNode {
-	def display(v: View){
+class DebugCursorGfx(parent: MashFinger) extends GfxNode {
+	def display(v: View) {
 		v.translate(parent.x, parent.y)
 		v.fill(0, 0, 0xFF)
 		v.rect(0, 0, 20, 20)
@@ -18,17 +18,17 @@ class DebugCursorGfx(parent: MashCursor) extends GfxNode {
  *
  * @author teamon
  */
-class MashCursor(xp: Double = 0.0, yp: Double = 0.0) extends TuioCursor(xp, yp) with Hooks with GfxNodesManager {
+class MashFinger(pos: Pos = Pos()) extends Finger(pos) with Hooks with GfxNodesManager {
 	// when cursor down
 	Mash.logger.debug(x + " x " + y)
 	Mash.logger.debug(Mash.app.gfxNodes.map(_.contains(this)))
 	Mash.app.gfxNodes.find(_.contains(this)).map(_.runOnCursorDownHooks(this))
-	Mash.symbols.foreach{ case (sid, sym) => sym.gfxNodes.find(_.contains(this)).map(_.runOnCursorDownHooks(this)) }
+	Mash.emblems.foreach {case (sid, emb) => emb.gfxNodes.find(_.contains(this)).map(_.runOnCursorDownHooks(this))}
 
 	addGfxNode(new DebugCursorGfx(this))
 
-	override def update(xp: Double, yp: Double) {
-		super.update(xp, yp)
+	override def update(pos: Pos) {
+		super.update(pos)
 		runOnUpdateHooks
 	}
 
@@ -37,7 +37,7 @@ class MashCursor(xp: Double = 0.0, yp: Double = 0.0) extends TuioCursor(xp, yp) 
 		runOnRemoveHooks
 	}
 
-	def x = xpos * Mash.resolution.width
+	def x = position.x * Mash.resolution.width
 
-	def y = ypos * Mash.resolution.height
+	def y = position.y * Mash.resolution.height
 }

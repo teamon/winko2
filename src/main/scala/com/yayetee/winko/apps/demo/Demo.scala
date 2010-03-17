@@ -1,40 +1,41 @@
 package com.yayetee.winko.apps.demo
 
 import com.yayetee.Rectangle
-import com.yayetee.Tools._
 import com.yayetee.winko._
+import com.yayetee.tuio.Pos
+import com.yayetee.Tools._
 
-class DemoSymbol(xp: Double, yp: Double, a:Double) extends MashSymbol(xp, yp, a) {
-	Mash.logger.debug("DemoSymbol create")
+class DemoEmblem(pos: Pos) extends MashEmblem(pos) {
+	Mash.logger.debug("DemoEmblem create")
 	addGfxNode(new Square(this))
 }
 
-class Square(val parent: MashSymbol) extends GfxNode {
+class Square(val parent: MashEmblem) extends GfxNode {
 	def boundingRect = new Rectangle(parent.x, parent.y, 100 x 100)
 
 	onCursorDown(cur => Mash.logger.debug("DON`T TOUCH ME!"))
 
 	def display(v: View) {
 		v.fill(0xFF, 0, 0)
-//		v.rotate(30)
+		//		v.rotate(30)
 		v.rect(boundingRect)
 	}
 
-	override def contains(cursor: MashCursor) = {
-		Mash.logger.debug("cursor: " + cursor.x + ", " + cursor.y)
+	override def contains(finger: MashFinger) = {
+		Mash.logger.debug("cursor: " + finger.x + ", " + finger.y)
 		Mash.logger.debug("parent: " + parent.x + ", " + parent.y)
-		boundingRect.contains(cursor.x, cursor.y)
+		boundingRect.contains(finger.x, finger.y)
 	}
 }
 
 object Demo extends Application {
 	override def name = "Demo"
 
-	def createSymbol(symbolID: Int, xpos: Double, ypos: Double, angle: Double) = symbolID match {
-		case _ => new DemoSymbol(xpos, ypos, angle)
+	def createEmblem(symbolID: Int, pos: Pos) = symbolID match {
+		case _ => new DemoEmblem(pos)
 	}
 
-	def createCursor(xpos: Double, ypos: Double) = new MashCursor(xpos, ypos)
+	def createFinger(pos: Pos) = new MashFinger(pos)
 }
 
 

@@ -3,11 +3,12 @@ package com.yayetee.winko
 import apps.demo.Demo
 import com.yayetee.Rectangle
 import com.yayetee.Tools._
+import com.yayetee.tuio.Pos
 
 class Button(index: Int) extends GfxNode {
-	val boundingRect = new Rectangle(100 + index*150, 100, 100 x 100)
-	
-	def display(v: View){
+	val boundingRect = new Rectangle(100 + index * 150, 100, 100 x 100)
+
+	def display(v: View) {
 		v.fill(0xFF, 0, 0)
 		v.rect(boundingRect)
 
@@ -22,12 +23,12 @@ class Button(index: Int) extends GfxNode {
 
 	}
 
-	override def contains(cursor: MashCursor) = boundingRect.contains(cursor.x, cursor.y)
+	override def contains(finger: MashFinger) = boundingRect.contains(finger.x, finger.y)
 }
 
 object AppLauncher extends Application {
 	val applications = List(Demo)
-	
+
 	override def start {
 		applications.zipWithIndex.foreach {
 			case (app, i) => addGfxNode(new Button(i) {
@@ -39,11 +40,11 @@ object AppLauncher extends Application {
 		}
 
 	}
-	
-	def createSymbol(symbolID: Int, xpos: Double, ypos: Double, angle: Double) = {
-		Mash.logger.debug("createSymbol appLauncher")		
-		new MashSymbol(xpos, ypos, angle)
+
+	def createEmblem(symbolID: Int, pos: Pos) = {
+		Mash.logger.debug("createSymbol appLauncher")
+		new MashEmblem(pos)
 	}
 
-	def createCursor(xpos: Double, ypos: Double) = new MashCursor(xpos, ypos)
+	def createFinger(pos: Pos) = new MashFinger(pos)
 }

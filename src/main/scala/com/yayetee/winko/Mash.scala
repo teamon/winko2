@@ -1,12 +1,10 @@
 package com.yayetee.winko
 
 import apps.demo.Midi
-import com.yayetee.tuio.{TuioFactory, TuioClient}
+import com.yayetee.tuio.{Factory, Client}
 import com.yayetee.opengl.OpenGLDisplay
-import collection.mutable.ListBuffer
 import com.yayetee.Tools
 import com.yayetee.Tools._
-
 /**
  * Main object
  *
@@ -16,7 +14,7 @@ object Mash {
 	val resolution = 640 x 480
 	val logger = Tools.logger(Mash.getClass)
 	var application: Option[Application] = None
-	var client: TuioClient[MashSymbol, MashCursor] = null
+	var client: Client[MashEmblem, MashFinger] = null
 
 	def main(args: Array[String]) {
 		val display = new OpenGLDisplay("w.i.n.k.o", resolution.width, resolution.height, new View)
@@ -27,12 +25,12 @@ object Mash {
 
 	def app = application.get
 
-	def symbols = client.symbols
+	def emblems = client.emblems
 
-	def cursors = client.cursors
+	def fingers = client.fingers
 
-	def run(newApp: Application){
-		if(client == null) client = new TuioClient[MashSymbol, MashCursor](3333, newApp)
+	def run(newApp: Application) {
+		if (client == null) client = new Client[MashEmblem, MashFinger](3333, newApp)
 		client.factory = newApp
 
 		application.map(_.stop)
@@ -51,8 +49,9 @@ object Mash {
  * @author teamon
  */
 
-abstract class Application extends TuioFactory[MashSymbol, MashCursor] with GfxNodesManager {
+abstract class Application extends Factory[MashEmblem, MashFinger] with GfxNodesManager {
 	def start {}
+
 	def stop {}
 
 	def name = "Application"

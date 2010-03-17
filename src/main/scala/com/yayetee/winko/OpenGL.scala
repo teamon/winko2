@@ -1,9 +1,9 @@
 package com.yayetee.winko
 
 import com.yayetee.opengl.OpenGL2DView
-import javax.media.opengl.GL
 import collection.mutable.ListBuffer
 import com.yayetee.winko.engine.Hooks
+import javax.media.opengl.GL
 
 
 /**
@@ -13,7 +13,7 @@ import com.yayetee.winko.engine.Hooks
  */
 class View extends OpenGL2DView {
 	import GL._
-	
+
 	def init {
 		gl.glShadeModel(GL_SMOOTH)
 		gl.glClearColor(0f, 0f, 0f, 0f)
@@ -43,18 +43,18 @@ class View extends OpenGL2DView {
 
 		Mash.app.displayGfxNodes(this)
 
-		Mash.symbols.foreach {
-			case (sid, sym) => {
+		Mash.emblems.foreach {
+			case (sid, emb) => {
 				pushMatrix
-				sym.displayGfxNodes(this)
+				emb.displayGfxNodes(this)
 				popMatrix
 			}
 		}
 
-		Mash.cursors.foreach {
-			case (sid, cur) => {
+		Mash.fingers.foreach {
+			case (sid, fin) => {
 				pushMatrix
-				cur.displayGfxNodes(this)
+				fin.displayGfxNodes(this)
 				popMatrix
 			}
 		}
@@ -67,7 +67,7 @@ class View extends OpenGL2DView {
 trait GfxNodesManager {
 	val gfxNodes = new ListBuffer[GfxNode]
 
-	def addGfxNode(node: GfxNode){
+	def addGfxNode(node: GfxNode) {
 		Mash.logger.debug("addGfxNode " + node)
 		gfxNodes += node
 	}
@@ -79,5 +79,6 @@ trait GfxNodesManager {
 
 trait GfxNode extends Hooks {
 	def display(view: View)
-	def contains(cursor: MashCursor) = false
+
+	def contains(finger: MashFinger) = false
 }

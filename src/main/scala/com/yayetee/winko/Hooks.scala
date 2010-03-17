@@ -1,8 +1,7 @@
 package com.yayetee.winko.engine
 
 import collection.mutable.ListBuffer
-import com.yayetee.winko.MashCursor
-
+import com.yayetee.winko.{MashFinger}
 
 /**
  * Hooks trait
@@ -10,11 +9,11 @@ import com.yayetee.winko.MashCursor
  * Mix it in any class to get hooks for free
  *
  * Example:
- *  class Foo extends Hooks {
- *    onUpdate {
+ *  class Foo extends Hooks  {
+ *    onUpdate  {
  *      println("UPDATED!")
- *    }
- *  }
+ * }
+ * }
  *
  *  val f = new Foo
  *  f.runOnUpdateHooks
@@ -25,7 +24,7 @@ import com.yayetee.winko.MashCursor
 trait Hooks {
 	val onUpdateHooks = new ListBuffer[() => Unit]
 	val onRemoveHooks = new ListBuffer[() => Unit]
-	val onCursorDownHooks = new ListBuffer[(MashCursor) => Unit]
+	val onFingerDownHooks = new ListBuffer[(MashFinger) => Unit]
 
 	/**
 	 * Add onUpdate hook called on object state update
@@ -42,11 +41,11 @@ trait Hooks {
 	def onRemove(f: => Unit) = onRemoveHooks.append(f _)
 
 	/**
-	 * Add onCursorDown hook called on new cursor click within object bounds
+	 * Add onFingerDown hook called on new finger click within object bounds
 	 *
 	 * @author teamon
 	 */
-	def onCursorDown(f: (MashCursor) => Unit) = onCursorDownHooks.append(f)
+	def onCursorDown(f: (MashFinger) => Unit) = onFingerDownHooks.append(f)
 
 	/**
 	 * Run onUpdate hooks
@@ -62,11 +61,11 @@ trait Hooks {
 	 */
 	def runOnRemoveHooks = onRemoveHooks.foreach(f => f())
 
-		/**
-	 * Run onCursorDown hooks
+	/**
+	 * Run onFingerDown hooks
 	 *
 	 * @author teamon
 	 */
-	def runOnCursorDownHooks(cursor: MashCursor) = onCursorDownHooks.foreach(f => f(cursor))
+	def runOnCursorDownHooks(finger: MashFinger) = onFingerDownHooks.foreach(f => f(finger))
 
 }

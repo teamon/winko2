@@ -18,7 +18,7 @@ class DebugCursorGfx(parent: MashCursor) extends GfxNode {
  *
  * @author teamon
  */
-class MashCursor(xp: Float, yp: Float) extends TuioCursor(xp, yp) with Hooks with GfxNodesManager {
+class MashCursor(xp: Double = 0.0, yp: Double = 0.0) extends TuioCursor(xp, yp) with Hooks with GfxNodesManager {
 	// when cursor down
 	Mash.logger.debug(x + " x " + y)
 	Mash.logger.debug(Mash.app.gfxNodes.map(_.contains(this)))
@@ -27,7 +27,7 @@ class MashCursor(xp: Float, yp: Float) extends TuioCursor(xp, yp) with Hooks wit
 
 	addGfxNode(new DebugCursorGfx(this))
 
-	override def update(xp: Float, yp: Float) {
+	override def update(xp: Double, yp: Double) {
 		super.update(xp, yp)
 		runOnUpdateHooks
 	}

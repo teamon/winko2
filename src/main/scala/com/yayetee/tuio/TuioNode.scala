@@ -5,13 +5,13 @@ package com.yayetee.tuio
  *
  * Base class for TuioSymbol and TuioCursor
  */
-abstract class TuioNode(var xpos: Float, var ypos: Float) {
+abstract class TuioNode(var xpos: Double, var ypos: Double) {
 	/**
 	 * Update node data, called by client on Tuio update message
 	 *
 	 * @author teamon
 	 */
-	def update(xp: Float, yp: Float) {
+	def update(xp: Double, yp: Double) {
 		xpos = xp
 		ypos = yp
 	}
@@ -29,20 +29,20 @@ abstract class TuioNode(var xpos: Float, var ypos: Float) {
  *
  * @author teamon
  */
-class TuioCursor(xp: Float, yp: Float) extends TuioNode(xp, yp)
+class TuioCursor(xp: Double, yp: Double) extends TuioNode(xp, yp)
 
 /**
  * TuioSymbol class
  *
  * @author teamon
  */
-class TuioSymbol(xp: Float, yp: Float, var angle: Float) extends TuioNode(xp, yp){
+class TuioSymbol(xp: Double, yp: Double, var angle: Double) extends TuioNode(xp, yp){
 		/**
 	 * Update node data, called by client on Tuio update message
 	 *
 	 * @author teamon
 	 */
-	def update(xp: Float, yp: Float, a: Float) {
+	def update(xp: Double, yp: Double, a: Double) {
 		super.update(xp, yp)
 		xpos = xp
 		ypos = yp

@@ -52,8 +52,8 @@ object RectMode extends Enumeration {
 	val Corner, Center = Value
 }
 
-class Rectangle(val x: Float, val y: Float, val width: Float, val height: Float, val mode: RectMode.RectMode) {
-	def this(xp: Float, yp: Float, size: Size) = this (xp, yp, size.width, size.height, RectMode.Center)
+class Rectangle(val x: Double, val y: Double, val width: Double, val height: Double, val mode: RectMode.RectMode) {
+	def this(xp: Double, yp: Double, size: Size) = this (xp, yp, size.width, size.height, RectMode.Center)
 
 	def contains(xp: Int, yp: Int) = {
 		if (mode == RectMode.Center) x + (width / 2) > xp && xp > x - (width / 2) && y + (height / 2) > yp && yp > y - (height / 2)
@@ -61,6 +61,6 @@ class Rectangle(val x: Float, val y: Float, val width: Float, val height: Float,
 	}
 
 
-	def contains(xp: Float, yp: Float): Boolean = contains(xp.toInt, yp.toInt)
+	def contains(xp: Double, yp: Double): Boolean = contains(xp.toInt, yp.toInt)
 
 }

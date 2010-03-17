@@ -8,8 +8,9 @@ package com.yayetee.tuio
  * @author teamon
  */
 
-trait TuioFactory[S, C] {
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float, angle: Float): S
 
-	def createCursor(xpos: Float, ypos: Float): C
+trait TuioFactory[S, C] {
+	def createSymbol(symbolID: Int, xpos: Double, ypos: Double, angle: Double): S
+
+	def createCursor(xpos: Double, ypos: Double): C
 }

@@ -9,10 +9,10 @@ import com.yayetee.Tools
  * Tuio usage example
  */
 
-class MySymbol(xpos: Float, ypos: Float, angle: Float) extends TuioSymbol(xpos, ypos, angle) {
+class MySymbol(xpos: Double, ypos: Double, angle: Double) extends TuioSymbol(xpos, ypos, angle) {
 	TuioDump.logger.info(this + " created (" + xpos + ", " + ypos + ")")
 
-	override def update(xp: Float, yp: Float, a: Float){
+	override def update(xp: Double, yp: Double, a: Double){
 		super.update(xp, yp, a)
 		TuioDump.logger.info(this + " updated (" + xpos + ", " + ypos + ")")
 	}
@@ -22,10 +22,10 @@ class MySymbol(xpos: Float, ypos: Float, angle: Float) extends TuioSymbol(xpos, 
 	}
 }
 
-class MyCursor(xpos: Float, ypos: Float) extends TuioCursor(xpos, ypos) {
+class MyCursor(xpos: Double, ypos: Double) extends TuioCursor(xpos, ypos) {
 	TuioDump.logger.info(this + " created (" + xpos + ", " + ypos + ")")
 
-	override def update(xp: Float, yp: Float){
+	override def update(xp: Double, yp: Double){
 		super.update(xp, yp)
 		TuioDump.logger.info(this + " updated (" + xpos + ", " + ypos + ")")
 	}
@@ -36,9 +36,9 @@ class MyCursor(xpos: Float, ypos: Float) extends TuioCursor(xpos, ypos) {
 }
 
 object MyFactory extends TuioFactory[MySymbol, MyCursor] {
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float, angle: Float) = new MySymbol(xpos, ypos, angle)
+	def createSymbol(symbolID: Int, xpos: Double, ypos: Double, angle: Double) = new MySymbol(xpos, ypos, angle)
 
-	def createCursor(xpos: Float, ypos: Float) = new MyCursor(xpos, ypos)
+	def createCursor(xpos: Double, ypos: Double) = new MyCursor(xpos, ypos)
 }
 
 

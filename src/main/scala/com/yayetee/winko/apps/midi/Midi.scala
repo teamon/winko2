@@ -59,11 +59,11 @@ object Midi extends Application {
 
 	override def name = "MIDI"
 
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float, a: Float) = symbolID match {
-		case _ => new Note(xpos, ypos, a, symbolID)
+	def createSymbol(symbolID: Int, xpos: Double, ypos: Double, a: Double) = symbolID match {
+		case _ => new Note(xpos, ypos, symbolID)
 	}
 
-	def createCursor(xpos: Float, ypos: Float) = new MashCursor(xpos, ypos)
+	def createCursor(xpos: Double, ypos: Double) = new MashCursor(xpos, ypos)
 
 	def <<(msg: MidiMessage) {
 		receiver match {

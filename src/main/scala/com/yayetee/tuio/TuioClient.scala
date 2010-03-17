@@ -77,10 +77,10 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, var factory: T
 				case "set" => {
 					val sid = args(1).asInstanceOf[Int].toLong
 					val cid = args(2).asInstanceOf[Int]
-					val xpos = args(3).asInstanceOf[Float]
-					val ypos = args(4).asInstanceOf[Float]
+					val xpos = args(3).asInstanceOf[Float].toDouble
+					val ypos = args(4).asInstanceOf[Float].toDouble
+					val angle = args(5).asInstanceOf[Float].toDouble
 					// TODO: Add more fields
-					val angle = args(5).asInstanceOf[Float]
 //				float xspeed = ((Float)args[6]).floatValue();
 //				float yspeed = ((Float)args[7]).floatValue();
 //				float rspeed = ((Float)args[8]).floatValue();

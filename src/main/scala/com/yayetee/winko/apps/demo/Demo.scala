@@ -4,7 +4,7 @@ import com.yayetee.Rectangle
 import com.yayetee.Tools._
 import com.yayetee.winko._
 
-class DemoSymbol(xp: Float, yp: Float, a:Float) extends MashSymbol(xp, yp, a) {
+class DemoSymbol(xp: Double, yp: Double, a:Double) extends MashSymbol(xp, yp, a) {
 	Mash.logger.debug("DemoSymbol create")
 	addGfxNode(new Square(this))
 }
@@ -30,11 +30,11 @@ class Square(val parent: MashSymbol) extends GfxNode {
 object Demo extends Application {
 	override def name = "Demo"
 
-	def createSymbol(symbolID: Int, xpos: Float, ypos: Float, angle: Float) = symbolID match {
+	def createSymbol(symbolID: Int, xpos: Double, ypos: Double, angle: Double) = symbolID match {
 		case _ => new DemoSymbol(xpos, ypos, angle)
 	}
 
-	def createCursor(xpos: Float, ypos: Float) = new MashCursor(xpos, ypos)
+	def createCursor(xpos: Double, ypos: Double) = new MashCursor(xpos, ypos)
 }
 
 

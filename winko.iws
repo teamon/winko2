@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" id="15302a95-ac70-4da0-b9e6-d7e74836bfc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/WSymbol.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/winko.iws" afterPath="$PROJECT_DIR$/winko.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/engine/Engine.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="winko.iws" />
@@ -200,10 +200,73 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OpenGL2DView.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala">
+      <file leaf-file-name="Midi.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="23" selection-start="2016" selection-end="2016" vertical-scroll-proportion="1.3692552">
+            <state line="36" column="55" selection-start="658" selection-end="658" vertical-scroll-proportion="0.60792077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MidiSystem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="193" column="25" selection-start="7259" selection-end="7259" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MidiDevice.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiDevice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="23" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShortMessage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/ShortMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="276" column="74" selection-start="8811" selection-end="8858" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mash.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="18" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MashCursor.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="16" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MashSymbol.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="12" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hooks.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="$TEMPLATE$" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -219,22 +282,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/apps/demo/Demo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/demo/Demo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala" />
       </list>
     </option>
   </component>
@@ -439,7 +502,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="midi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -469,7 +536,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tuio" />
+              <option name="myItemId" value="winko" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,40 +581,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="winko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="winko" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="osc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewSettings">
@@ -561,7 +606,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.pluginManager" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Java" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -752,7 +797,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="$TEMPLATE$" y="22" width="1280" height="730" extended-state="$TEMPLATE$" />
+    <frame x="8" y="32" width="1416" height="905" extended-state="$TEMPLATE$" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -761,14 +806,14 @@
       <window_info id="Color Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30500758" sideWeight="0.9976825" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30455637" sideWeight="0.9976825" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982794" sideWeight="0.6658768" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.66214687" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39986235" sideWeight="0.6658768" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26484376" sideWeight="0.5720789" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24646893" sideWeight="0.6618705" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41729894" sideWeight="0.9972471" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297362" sideWeight="0.9992938" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982794" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -863,66 +908,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/scala-lang/scala-library/2.8.0.Beta1-RC8/scala-library-2.8.0.Beta1-RC8.jar!/scala/Predef.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="56" selection-start="657" selection-end="657" vertical-scroll-proportion="-3.5009074" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="11" selection-start="150" selection-end="150" vertical-scroll-proportion="0.18640776" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="88" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="126" selection-end="126" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="157" selection-end="157" vertical-scroll-proportion="0.23970038" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="220" selection-end="220" vertical-scroll-proportion="0.35955057" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="$TEMPLATE$" selection-start="793" selection-end="793" vertical-scroll-proportion="0.5093633" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/illposed/osc/OSCPortIn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="42" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.41947564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="69" selection-start="458" selection-end="458" vertical-scroll-proportion="0.09363296" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="305" selection-end="305" vertical-scroll-proportion="0.16323297" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="25" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" />
@@ -933,16 +918,100 @@
         <state line="7" column="6" selection-start="363" selection-end="363" vertical-scroll-proportion="0.3209169" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="29" selection-start="745" selection-end="745" vertical-scroll-proportion="0.5689382">
+        <state line="153" column="34" selection-start="3443" selection-end="3443" vertical-scroll-proportion="0.5578447">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/opengl/OpenGL2DView.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="23" selection-start="2016" selection-end="2016" vertical-scroll-proportion="1.3692552">
+        <state line="26" column="3" selection-start="$TEMPLATE$" selection-end="1012" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="30" selection-start="609" selection-end="609" vertical-scroll-proportion="0.35816166">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="22" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.33280507">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="18" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="$TEMPLATE$" selection-start="980" selection-end="980" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="12" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="16" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/ShortMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="276" column="74" selection-start="8811" selection-end="8858" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="193" column="25" selection-start="7259" selection-end="7259" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="17" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-14.112871">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/Synthesizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="16" selection-start="4573" selection-end="4573" vertical-scroll-proportion="0.33267328">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="55" selection-start="658" selection-end="658" vertical-scroll-proportion="0.60792077">
           <folding />
         </state>
       </provider>

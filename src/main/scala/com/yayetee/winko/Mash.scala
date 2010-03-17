@@ -1,5 +1,6 @@
 package com.yayetee.winko
 
+import apps.demo.Midi
 import com.yayetee.tuio.{TuioFactory, TuioClient}
 import com.yayetee.opengl.OpenGLDisplay
 import collection.mutable.ListBuffer
@@ -21,7 +22,7 @@ object Mash {
 		val display = new OpenGLDisplay("w.i.n.k.o", resolution.width, resolution.height, new View)
 		display.start
 
-		run(AppLauncher)
+		run(Midi)
 	}
 
 	def app = application.get

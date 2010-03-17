@@ -12,25 +12,23 @@ import com.yayetee.Tools
  *
  * @param port Tuio port for connection (default 3333)
  * @author teamon
- * @see TuioSymbol
- * @see TuioCursor
+ * @see Symbol
+ * @see Cursor
  *
  * @todo Take care of frame loss
  */
 
-class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, var factory: TuioFactory[S, C]) extends OSCListener {
-	def this(factory: TuioFactory[S, C]) = this (3333, factory)
+class Client[E <: Emblem, F <: Finger](val port: Int, var factory: Factory[E, F]) extends OSCListener {
+	def this(factory: Factory[E, F]) = this (3333, factory)
 
 	def logger = Tools.logger(this.getClass)
 
-	val symbols = new HashMap[Long, S]
-	val aliveSymbols = new ListBuffer[Long]
+	val emblems = new HashMap[Long, E]
+	val aliveEmblems = new ListBuffer[Long]
 
-	val cursors = new HashMap[Long, C]
-	val aliveCursors = new ListBuffer[Long]
-	logger.debug("TuioClient new with " + factory)
+	val fingers = new HashMap[Long, F]
+	val aliveFingers = new ListBuffer[Long]
 	val osc = new OSCPortIn(port)
-	logger.debug("TuioClient new with " + factory)
 
 
 	/**
@@ -39,7 +37,6 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, var factory: T
 	 * @author teamon
 	 */
 	def connect {
-		logger.debug("connect with " + factory)
 		try {
 			osc.addListener("/tuio/2Dobj", this)
 			osc.addListener("/tuio/2Dcur", this)
@@ -73,13 +70,15 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, var factory: T
 		val address = message.getAddress
 
 		address match {
+			// emblems
 			case "/tuio/2Dobj" => command match {
 				case "set" => {
 					val sid = args(1).asInstanceOf[Int].toLong
 					val cid = args(2).asInstanceOf[Int]
-					val xpos = args(3).asInstanceOf[Float].toDouble
-					val ypos = args(4).asInstanceOf[Float].toDouble
-					val angle = args(5).asInstanceOf[Float].toDouble
+
+					val dargs = (3 to 10).map(args(_).asInstanceOf[Float].toDouble)
+					val pos = Pos(dargs(0), dargs(1), dargs(2))
+
 					// TODO: Add more fields
 //				float xspeed = ((Float)args[6]).floatValue();
 //				float yspeed = ((Float)args[7]).floatValue();
@@ -87,49 +86,51 @@ class TuioClient[S <: TuioSymbol, C <: TuioCursor](val port: Int, var factory: T
 //				float maccel = ((Float)args[9]).floatValue();
 //				float raccel = ((Float)args[10]).floatValue();
 
-					symbols.get(sid) map (_.update(xpos, ypos, angle)) getOrElse {
-						logger.debug("Create symbol from " + factory)
-						symbols(sid) = factory.createSymbol(cid, xpos, ypos, angle)
+					emblems.get(sid) map (_.update(pos)) getOrElse {
+						emblems(sid) = factory.createEmblem(cid, pos)
 					}
 
-					aliveSymbols += sid
+					aliveEmblems += sid
 
 				}
 				case "alive" => {
-					aliveSymbols.clear
-					args.drop(1).foreach(aliveSymbols += _.asInstanceOf[Int].toLong)
+					aliveEmblems.clear
+					args.drop(1).foreach(aliveEmblems += _.asInstanceOf[Int].toLong)
 				}
 				case "fseq" => {
-					symbols.filter(s => !aliveSymbols.contains(s._1)).foreach(s => {
+					emblems.filter(s => !aliveEmblems.contains(s._1)).foreach(s => {
 						s._2.remove
-						symbols -= s._1
+						emblems -= s._1
 					})
-					aliveSymbols.clear
+					aliveEmblems.clear
 				}
 			}
+
+			// fingers
 			case "/tuio/2Dcur" => command match {
 				case "set" => {
 					val sid = args(1).asInstanceOf[Int].toLong
-					val xpos = args(2).asInstanceOf[Float]
-					val ypos = args(3).asInstanceOf[Float]
+
+					val dargs = (3 to 10).map(args(_).asInstanceOf[Float].toDouble)
+					val pos = Pos(dargs(0), dargs(1), dargs(2))
 					// TODO: Add more fields
 
-					cursors.get(sid).map(_.update(xpos, ypos)) getOrElse {
-						cursors(sid) = factory.createCursor(xpos, ypos)
+					fingers.get(sid).map(_.update(pos)) getOrElse {
+						fingers(sid) = factory.createFinger(pos)
 					}
 
-					aliveCursors += sid
+					aliveFingers += sid
 				}
 				case "alive" => {
-					aliveCursors.clear
-					args.drop(1).foreach(aliveCursors += _.asInstanceOf[Int].toLong)
+					aliveFingers.clear
+					args.drop(1).foreach(aliveFingers += _.asInstanceOf[Int].toLong)
 				}
 				case "fseq" => {
-					cursors.filter(c => !aliveCursors.contains(c._1)).foreach(c => {
+					fingers.filter(c => !aliveFingers.contains(c._1)).foreach(c => {
 						c._2.remove
-						cursors -= c._1
+						fingers -= c._1
 					})
-					aliveCursors.clear
+					aliveFingers.clear
 				}
 			}
 		}

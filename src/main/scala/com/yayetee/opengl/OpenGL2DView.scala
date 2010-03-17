@@ -73,8 +73,7 @@ abstract class OpenGL2DView extends GLEventListener {
 		gl.glMatrixMode(GL_MODELVIEW)
 		gl.glPopMatrix
 	}
-
-
+	
 
 	// helpers
 

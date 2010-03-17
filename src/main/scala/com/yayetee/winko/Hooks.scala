@@ -60,7 +60,7 @@ trait Hooks {
 	 *
 	 * @author teamon
 	 */
-	def runOnRemoveHooks = onUpdateHooks.foreach(f => f())
+	def runOnRemoveHooks = onRemoveHooks.foreach(f => f())
 
 		/**
 	 * Run onCursorDown hooks

@@ -1,7 +1,7 @@
 package com.yayetee.winko
 
 import com.yayetee.winko.engine.Hooks
-import com.yayetee.tuio.{Pos, Emblem}
+import com.yayetee.tuio.{Speed, Pos, Emblem}
 
 /**
  * MashEmblem
@@ -10,9 +10,9 @@ import com.yayetee.tuio.{Pos, Emblem}
  *
  * @author teamon
  */
-class MashEmblem(pos: Pos = Pos()) extends Emblem(pos) with Hooks with GfxNodesManager {
-	override def update(pos: Pos) {
-		super.update(pos)
+class MashEmblem(pos: Pos = Pos(), sp: Speed = Speed()) extends Emblem(pos, sp) with Hooks with GfxNodesManager {
+	override def update(pos: Pos, sp: Speed) {
+		super.update(pos, sp)
 		runOnUpdateHooks
 	}
 

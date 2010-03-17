@@ -7,21 +7,28 @@ case class Pos(var x: Double = 0.0, var y: Double = 0.0, var angle: Double = 0.0
 		angle = pos.angle
 	}
 }
-case class Speed(x: Double = 0.0, y: Double = 0.0, rotation: Double = 0.0)
+case class Speed(var x: Double = 0.0, var y: Double = 0.0, var rotation: Double = 0.0){
+	def update(sp: Speed){
+		x = sp.x
+		y = sp.y
+		rotation = sp.rotation
+	}
+}
 
 /**
  * Node
  *
  * Base class for TuioSymbol and TuioCursor
  */
-abstract class Node(val position: Pos = Pos()) {
+abstract class Node(val position: Pos = Pos(), val speed: Speed = Speed()) {
 	/**
 	 * Update node data, called by client on Tuio update message
 	 *
 	 * @author teamon
 	 */
-	def update(pos: Pos) {
-		pos.update(pos)
+	def update(pos: Pos, sp: Speed) {
+		position.update(pos)
+		speed.update(sp)
 	}
 
 	/**
@@ -37,11 +44,11 @@ abstract class Node(val position: Pos = Pos()) {
  *
  * @author teamon
  */
-class Finger(pos: Pos = Pos()) extends Node(pos)
+class Finger(pos: Pos = Pos(), sp: Speed = Speed()) extends Node(pos, sp)
 
 /**
  * Emblem class
  *
  * @author teamon
  */
-class Emblem(pos: Pos = Pos()) extends Node(pos)
+class Emblem(pos: Pos = Pos(), sp: Speed = Speed()) extends Node(pos, sp)

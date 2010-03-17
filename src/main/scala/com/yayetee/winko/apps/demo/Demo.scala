@@ -13,7 +13,7 @@ class DemoEmblem(pos: Pos) extends MashEmblem(pos) {
 class Square(val parent: MashEmblem) extends GfxNode {
 	def boundingRect = new Rectangle(parent.x, parent.y, 100 x 100)
 
-	onCursorDown(cur => Mash.logger.debug("DON`T TOUCH ME!"))
+	onFingerDown(cur => Mash.logger.debug("DON`T TOUCH ME!"))
 
 	def display(v: View) {
 		v.fill(0xFF, 0, 0)
@@ -31,11 +31,10 @@ class Square(val parent: MashEmblem) extends GfxNode {
 object Demo extends Application {
 	override def name = "Demo"
 
-	def createEmblem(symbolID: Int, pos: Pos) = symbolID match {
+	override def createEmblem(symbolID: Int, pos: Pos) = symbolID match {
 		case _ => new DemoEmblem(pos)
 	}
 
-	def createFinger(pos: Pos) = new MashFinger(pos)
 }
 
 

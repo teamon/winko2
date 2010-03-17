@@ -1,10 +1,11 @@
 package com.yayetee.winko
 
 import apps.demo.Midi
-import com.yayetee.tuio.{Factory, Client}
 import com.yayetee.opengl.OpenGLDisplay
 import com.yayetee.Tools
 import com.yayetee.Tools._
+import com.yayetee.tuio.{Pos, Speed, Factory, Client}
+
 /**
  * Main object
  *
@@ -55,6 +56,12 @@ abstract class Application extends Factory[MashEmblem, MashFinger] with GfxNodes
 	def stop {}
 
 	def name = "Application"
+
+	def createEmblem(symbolID: Int, pos: Pos, sp: Speed) = new MashEmblem(pos, sp)
+	def createEmblem(symbolID: Int, pos: Pos): MashEmblem = createEmblem(symbolID, pos, Speed())
+
+	def createFinger(pos: Pos, sp: Speed) = new MashFinger(pos, sp)
+	def createFinger(pos: Pos): MashFinger = createFinger(pos, Speed(0,0))
 }
 
 

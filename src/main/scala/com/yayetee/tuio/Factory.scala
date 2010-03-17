@@ -10,7 +10,7 @@ package com.yayetee.tuio
 
 
 trait Factory[E, F] {
-	def createEmblem(symbolID: Int, pos: Pos): E
+	def createEmblem(symbolID: Int, pos: Pos, sp: Speed): E
 
-	def createFinger(pos: Pos): F
+	def createFinger(pos: Pos, sp: Speed): F
 }

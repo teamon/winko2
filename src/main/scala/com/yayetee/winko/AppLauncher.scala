@@ -32,7 +32,7 @@ object AppLauncher extends Application {
 	override def start {
 		applications.zipWithIndex.foreach {
 			case (app, i) => addGfxNode(new Button(i) {
-				onCursorDown(cur => {
+				onFingerDown(cur => {
 					Mash.logger.debug("Run " + app.name + " application")
 					Mash.run(Demo)
 				})
@@ -40,11 +40,4 @@ object AppLauncher extends Application {
 		}
 
 	}
-
-	def createEmblem(symbolID: Int, pos: Pos) = {
-		Mash.logger.debug("createSymbol appLauncher")
-		new MashEmblem(pos)
-	}
-
-	def createFinger(pos: Pos) = new MashFinger(pos)
 }

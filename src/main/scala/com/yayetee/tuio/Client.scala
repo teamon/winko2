@@ -78,16 +78,14 @@ class Client[E <: Emblem, F <: Finger](val port: Int, var factory: Factory[E, F]
 
 					val dargs = (3 to 10).map(args(_).asInstanceOf[Float].toDouble)
 					val pos = Pos(dargs(0), dargs(1), dargs(2))
+					val sp = Speed(dargs(3), dargs(4), dargs(5))
 
 					// TODO: Add more fields
-//				float xspeed = ((Float)args[6]).floatValue();
-//				float yspeed = ((Float)args[7]).floatValue();
-//				float rspeed = ((Float)args[8]).floatValue();
 //				float maccel = ((Float)args[9]).floatValue();
 //				float raccel = ((Float)args[10]).floatValue();
-
-					emblems.get(sid) map (_.update(pos)) getOrElse {
-						emblems(sid) = factory.createEmblem(cid, pos)
+					
+					emblems.get(sid) map (_.update(pos, sp)) getOrElse {
+						emblems(sid) = factory.createEmblem(cid, pos, sp)
 					}
 
 					aliveEmblems += sid
@@ -111,12 +109,15 @@ class Client[E <: Emblem, F <: Finger](val port: Int, var factory: Factory[E, F]
 				case "set" => {
 					val sid = args(1).asInstanceOf[Int].toLong
 
-					val dargs = (3 to 10).map(args(_).asInstanceOf[Float].toDouble)
-					val pos = Pos(dargs(0), dargs(1), dargs(2))
+					val dargs = (2 to 6).map(args(_).asInstanceOf[Float].toDouble)
+					val pos = Pos(dargs(0), dargs(1))
+					val sp = Speed(dargs(2), dargs(3))
+					
 					// TODO: Add more fields
+//				float maccel = ((Float)args[6]).floatValue();
 
-					fingers.get(sid).map(_.update(pos)) getOrElse {
-						fingers(sid) = factory.createFinger(pos)
+					fingers.get(sid).map(_.update(pos, sp)) getOrElse {
+						fingers(sid) = factory.createFinger(pos, sp)
 					}
 
 					aliveFingers += sid

@@ -18,7 +18,7 @@ class DebugCursorGfx(parent: MashFinger) extends GfxNode {
  *
  * @author teamon
  */
-class MashFinger(pos: Pos = Pos()) extends Finger(pos) with Hooks with GfxNodesManager {
+class MashFinger(pos: Pos = Pos(), sp: Speed = Speed()) extends Finger(pos, sp) with Hooks with GfxNodesManager {
 	// when cursor down
 	Mash.logger.debug(x + " x " + y)
 	Mash.logger.debug(Mash.app.gfxNodes.map(_.contains(this)))
@@ -27,8 +27,8 @@ class MashFinger(pos: Pos = Pos()) extends Finger(pos) with Hooks with GfxNodesM
 
 	addGfxNode(new DebugCursorGfx(this))
 
-	override def update(pos: Pos) {
-		super.update(pos)
+	override def update(pos: Pos, sp: Speed) {
+		super.update(pos, sp)
 		runOnUpdateHooks
 	}
 

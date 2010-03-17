@@ -45,7 +45,7 @@ trait Hooks {
 	 *
 	 * @author teamon
 	 */
-	def onCursorDown(f: (MashFinger) => Unit) = onFingerDownHooks.append(f)
+	def onFingerDown(f: (MashFinger) => Unit) = onFingerDownHooks.append(f)
 
 	/**
 	 * Run onUpdate hooks

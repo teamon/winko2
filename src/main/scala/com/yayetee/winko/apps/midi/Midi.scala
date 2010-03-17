@@ -1,24 +1,10 @@
 package com.yayetee.winko.apps.demo
 
 import com.yayetee.winko._
+import apps.Loops
 import javax.sound.midi._
 import com.yayetee.tuio.Pos
-
-abstract class Loop(var timeout: Int) extends Thread {
-	var keep = true
-
-	def stopIt {keep = false}
-
-	override def run {
-		while (keep) {
-			tick
-			Thread.sleep(timeout)
-		}
-	}
-
-	def tick
-}
-
+import com.yayetee.Rectangle
 
 object Note {
 	def on(data1: Int, data2: Int) = {
@@ -34,18 +20,12 @@ object Note {
 	}
 }
 
-trait Loops {
-	def loop(timeout: Int, f: Unit) = {
-		val l = new Loop(timeout) {def tick {f}}
-		l.start
-		l
-	}
-}
 
-class Tempo(pos: Pos) extends MashEmblem(pos) with Loops {
-	val tempo = loop(300, {
+
+class Tempo extends MashEmblem with Loops {
+	val tempo = loop(300) {
 		Midi << Note.on(35, 100)
-	})
+	}
 
 	onUpdate {
 		tempo.timeout = (position.angle * 900 / (2 * Math.Pi)).toInt + 100
@@ -57,15 +37,25 @@ class Tempo(pos: Pos) extends MashEmblem(pos) with Loops {
 
 }
 
+//class Button(val parent: Note) extends GfxNode {
+//	def boundingRect = new Rectangle(parent.x, parent.y, 100 x 100)
+//
+//	onFingerDown(cur => Mash.logger.debug("DON`T TOUCH ME!"))
+//
+//	def display(v: View) {
+//		v.fill(0xFF, 0, 0)
+//		//		v.rotate(30)
+//		v.rect(boundingRect)
+//	}
+//
+//	override def contains(finger: MashFinger) = {
+//		Mash.logger.debug("cursor: " + finger.x + ", " + finger.y)
+//		Mash.logger.debug("parent: " + parent.x + ", " + parent.y)
+//		boundingRect.contains(finger.x, finger.y)
+//	}
+//}
+
 class Note(pos: Pos) extends MashEmblem(pos) {
-	//	val loop = new Loop(500){
-	//		def tick {
-	//			Midi << Note.on(35, 100)
-	//		}
-	//	}
-	//	loop.start
-
-
 
 }
 
@@ -75,32 +65,36 @@ object Midi extends Application {
 
 	override def name = "MIDI"
 
-	def createEmblem(symbolID: Int, pos: Pos) = symbolID match {
+	override def createEmblem(symbolID: Int, pos: Pos) = symbolID match {
+		case 0 => new Tempo
 		case _ => new Note(pos)
 	}
 
-	def createFinger(pos: Pos) = new MashFinger(pos)
-
 	def <<(msg: MidiMessage) {
 		receiver match {
-			case Some(r) =>
-				r.send(msg, -1)
+			case Some(r) => r.send(msg, -1)
 			case None =>
 		}
 	}
 
-	override def start {
-		device = MidiSystem.getMidiDeviceInfo.toList.find(_.getName == "Java Sound Synthesizer").map(MidiSystem.getMidiDevice(_))
+	def findDevice = {
+		val devices = MidiSystem.getMidiDeviceInfo.toList
+		val emu = devices.filter(_.getName == "E-MU 0404 | USB")
 
+		if(emu.size > 1) Some(emu(1))
+		else devices.find(_.getName == "Java Sound Synthesizer")
+	}
+
+	override def start {
+		device = findDevice.map(MidiSystem.getMidiDevice(_))
 
 		device.map(d => {
 			d.open
-
 			val rec = d.getReceiver
 			receiver = if (rec != null) Some(rec) else None
 		})
 
-
+		// set drums!
 		val msg = new ShortMessage
 		msg.setMessage(ShortMessage.PROGRAM_CHANGE, 9, 1, 0)
 		this << msg

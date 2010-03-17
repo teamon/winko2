@@ -2,19 +2,17 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" id="15302a95-ac70-4da0-b9e6-d7e74836bfc4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashEmblem.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashFinger.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashSymbol.scala" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/winko.iws" afterPath="$PROJECT_DIR$/winko.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Nodes.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Nodes.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/Utils.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
     </list>
-    <ignored path=".idea/workspace.xml" />
     <ignored path="winko.iws" />
+    <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,37 +203,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppLauncher.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="24" selection-start="382" selection-end="382" vertical-scroll-proportion="0.40233722">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MashFinger.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashFinger.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MashEmblem.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashEmblem.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Midi.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="18" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
+            <state line="72" column="12" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,16 +215,25 @@
       <file leaf-file-name="Demo.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
+            <state line="36" column="$TEMPLATE$" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OpenGL.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
+      <file leaf-file-name="AppLauncher.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="11" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
+            <state line="14" column="25" selection-start="339" selection-end="339" vertical-scroll-proportion="0.34567901">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Nodes.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Nodes.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="17" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -262,7 +242,34 @@
       <file leaf-file-name="Mash.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="26" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+            <state line="63" column="40" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="6" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MashFinger.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashFinger.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="24" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fader.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Fader.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="59" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -278,21 +285,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioClient.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioNode.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/TuioFactory.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Nodes.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashCursor.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashEmblem.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/Utils.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Fader.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Factory.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashEmblem.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashFinger.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Nodes.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala" />
       </list>
     </option>
@@ -380,6 +387,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -501,10 +509,6 @@
               <option name="myItemId" value="apps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="midi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -595,7 +599,6 @@
         </subPane>
       </pane>
       <pane id="Favorites" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -620,9 +623,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -805,29 +808,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="$TEMPLATE$" y="22" width="1680" height="980" extended-state="6" />
+    <frame x="45" y="37" width="1353" height="846" extended-state="$TEMPLATE$" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven-2 Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Color Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30363035" sideWeight="0.9976825" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30322582" sideWeight="0.9976825" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982794" sideWeight="0.6658768" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.66214687" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39986235" sideWeight="0.6658768" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2077381" sideWeight="0.68976897" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2579453" sideWeight="0.68774194" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30253026" sideWeight="0.9992938" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30322582" sideWeight="0.9992938" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Aspects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982794" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="$TEMPLATE$" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Code Graph" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -916,114 +919,102 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="25" selection-start="7259" selection-end="7259" vertical-scroll-proportion="0.33267328">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/MidiDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="568" selection-end="568" vertical-scroll-proportion="0.39694658">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/src.jar!/src/javax/sound/midi/ShortMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="276" column="74" selection-start="8811" selection-end="8858" vertical-scroll-proportion="0.33206108">
-          <folding />
-        </state>
+        <state line="276" column="74" selection-start="8811" selection-end="8858" vertical-scroll-proportion="0.33206108" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/Tools.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="45" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.6912599">
+        <state line="55" column="45" selection-start="1240" selection-end="1240" vertical-scroll-proportion="0.6912599" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="29" selection-start="$TEMPLATE$" selection-end="1481" vertical-scroll-proportion="0.4013378" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="11" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.091819696" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="$TEMPLATE$" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/Utils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="6" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Fader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="59" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Factory.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="170" selection-end="170" vertical-scroll-proportion="0.32107022">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Nodes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="19" selection-start="458" selection-end="458" vertical-scroll-proportion="0.53511703">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/examples/TuioDump.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="$TEMPLATE$" selection-end="1481" vertical-scroll-proportion="0.4013378">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="45" selection-start="2673" selection-end="2673" vertical-scroll-proportion="0.38628763">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Hooks.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="88" selection-start="1356" selection-end="1356" vertical-scroll-proportion="1.632107">
+        <state line="12" column="$TEMPLATE$" selection-start="139" selection-end="238" vertical-scroll-proportion="0.2570281">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashEmblem.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="18" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="26" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/OpenGL.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="11" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
+        <state line="14" column="24" selection-start="404" selection-end="404" vertical-scroll-proportion="0.3980198">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/MashFinger.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="42" selection-start="557" selection-end="557" vertical-scroll-proportion="0.0">
+        <state line="30" column="24" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/Mash.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="40" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Client.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="6" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/tuio/Nodes.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/midi/Midi.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="12" selection-start="1513" selection-end="1513" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/apps/demo/Demo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="$TEMPLATE$" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/yayetee/winko/AppLauncher.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="382" selection-end="382" vertical-scroll-proportion="0.40233722">
+        <state line="14" column="25" selection-start="339" selection-end="339" vertical-scroll-proportion="0.34567901">
           <folding />
         </state>
       </provider>

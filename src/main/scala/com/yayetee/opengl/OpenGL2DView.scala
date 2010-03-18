@@ -136,6 +136,8 @@ abstract class OpenGL2DView extends GLEventListener {
 	}
 
 	def ellipseArc(x: Double, y: Double, rx: Double, ry: Double, weight: Double, angle: Double) {
+		if(angle == 0) return;
+
 		val rx_ = rx + weight
 		val ry_ = ry + weight
 
@@ -161,14 +163,14 @@ abstract class OpenGL2DView extends GLEventListener {
 
 	def translate(x: Double, y: Double) = gl.glTranslated(x, y, 0)
 
-	def rotate(a: Double) = gl.glRotated(a, 0, 0, 1)
+	def rotate(a: Double) = gl.glRotated(a*180/Math.Pi, 0, 0, 1)
 
 	def fill(r: Double, g: Double, b: Double) = gl.glColor3d(r, g, b)
 
 
 	def fill(r: Int, g: Int, b: Int) = gl.glColor3f(r / 255f, g / 255f, b / 255f)
 
-	def fill(rgb: Int):Unit = fill(rgb/(256*256), (rgb/256)%256 , rgb%256)
+//	def fill(rgb: Int):Unit = fill(rgb%(256*256), rgb%(256*256) , rgb%256)
 
 }
 

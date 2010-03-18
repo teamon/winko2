@@ -12,6 +12,8 @@ import com.yayetee.tuio.{Speed, Pos, Emblem}
  */
 class MashEmblem(pos: Pos = Pos(), sp: Speed = Speed()) extends Emblem(pos, sp) with Hooks with GfxNodesManager {
 	override def update(pos: Pos, sp: Speed) {
+		pos.x *= Mash.resolution.width
+		pos.y *= Mash.resolution.height
 		super.update(pos, sp)
 		runOnUpdateHooks
 	}
@@ -21,7 +23,13 @@ class MashEmblem(pos: Pos = Pos(), sp: Speed = Speed()) extends Emblem(pos, sp) 
 		runOnRemoveHooks
 	}
 
-	def x = position.x * Mash.resolution.width
+	@deprecated
+	def x = position.x
 
-	def y = position.y * Mash.resolution.height
+	@deprecated
+	def y = position.y
+
+	def closeEmblems[T](distance: Double) = Mash.emblems.filter {
+		case (sid, emb) => emb != this && emb.isInstanceOf[T] && this.position.distanceTo(emb.position) < distance
+	}.map {  case(sid, emb) => emb.asInstanceOf[T] }
 }

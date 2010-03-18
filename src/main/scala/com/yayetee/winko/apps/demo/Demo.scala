@@ -2,8 +2,8 @@ package com.yayetee.winko.apps.demo
 
 import com.yayetee.Rectangle
 import com.yayetee.winko._
-import com.yayetee.tuio.Pos
 import com.yayetee.Tools._
+import com.yayetee.tuio.{Speed, Pos}
 
 class DemoEmblem(pos: Pos) extends MashEmblem(pos) {
 	Mash.logger.debug("DemoEmblem create")
@@ -17,7 +17,7 @@ class Square(val parent: MashEmblem) extends GfxNode {
 
 	def display(v: View) {
 		v.fill(0xFF, 0, 0)
-		//		v.rotate(30)
+		// v.rotate(30)
 		v.rect(boundingRect)
 	}
 
@@ -31,7 +31,7 @@ class Square(val parent: MashEmblem) extends GfxNode {
 object Demo extends Application {
 	override def name = "Demo"
 
-	override def createEmblem(symbolID: Int, pos: Pos) = symbolID match {
+	override def createEmblem(symbolID: Int, pos: Pos, speed: Speed) = symbolID match {
 		case _ => new DemoEmblem(pos)
 	}
 

@@ -41,6 +41,10 @@ class View extends OpenGL2DView {
 		clear(GL_COLOR_BUFFER_BIT)
 		loadIdentity
 
+		translate(240, 0)
+		fill(255, 255, 255)
+		rect(320, 240, 640, 480)
+
 		Mash.app.displayGfxNodes(this)
 
 		Mash.emblems.foreach {
@@ -72,8 +76,16 @@ trait GfxNodesManager {
 		gfxNodes += node
 	}
 
+	def removeGfxNode(node: GfxNode) {
+		gfxNodes -= node
+	}
+
 	def displayGfxNodes(view: View) {
-		gfxNodes.foreach(_.display(view))
+		gfxNodes.foreach(gfx => {
+			view.pushMatrix
+			gfx.display(view)
+			view.popMatrix
+		})
 	}
 }
 

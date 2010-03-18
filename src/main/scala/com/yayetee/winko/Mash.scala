@@ -5,6 +5,7 @@ import com.yayetee.opengl.OpenGLDisplay
 import com.yayetee.Tools
 import com.yayetee.Tools._
 import com.yayetee.tuio.{Pos, Speed, Factory, Client}
+import org.apache.log4j.Level
 
 /**
  * Main object
@@ -12,13 +13,16 @@ import com.yayetee.tuio.{Pos, Speed, Factory, Client}
  * @author teamon
  */
 object Mash {
+//	val resolution = 1024 x 768
 	val resolution = 640 x 480
 	val logger = Tools.logger(Mash.getClass)
+	logger.setLevel(Level.ERROR)
 	var application: Option[Application] = None
 	var client: Client[MashEmblem, MashFinger] = null
 
 	def main(args: Array[String]) {
 		val display = new OpenGLDisplay("w.i.n.k.o", resolution.width, resolution.height, new View)
+//		val display = new OpenGLDisplay("w.i.n.k.o", new View, true)
 		display.start
 
 		run(Midi)
@@ -34,7 +38,7 @@ object Mash {
 		if (client == null) client = new Client[MashEmblem, MashFinger](3333, newApp)
 		client.factory = newApp
 
-		application.map(_.stop)
+		application.foreach(_.stop)
 		application = Some(newApp)
 
 		client.disconnect
@@ -57,11 +61,21 @@ abstract class Application extends Factory[MashEmblem, MashFinger] with GfxNodes
 
 	def name = "Application"
 
-	def createEmblem(symbolID: Int, pos: Pos, sp: Speed) = new MashEmblem(pos, sp)
-	def createEmblem(symbolID: Int, pos: Pos): MashEmblem = createEmblem(symbolID, pos, Speed())
+	def createEmblem(symbolID: Int, pos: Pos, sp: Speed) = {
+		pos.x *= Mash.resolution.width
+		pos.y *= Mash.resolution.height
+		emblem(symbolID, pos, sp)
+	}
 
-	def createFinger(pos: Pos, sp: Speed) = new MashFinger(pos, sp)
-	def createFinger(pos: Pos): MashFinger = createFinger(pos, Speed(0,0))
+	def createFinger(pos: Pos, sp: Speed) = {
+		pos.x *= Mash.resolution.width
+		pos.y *= Mash.resolution.height
+		finger(pos, sp)
+	}
+
+	def emblem(symbolID: Int, pos: Pos, sp: Speed) = new MashEmblem(pos, sp)
+
+	def finger(pos: Pos, sp: Speed) = new MashFinger(pos, sp)
 }
 
 
